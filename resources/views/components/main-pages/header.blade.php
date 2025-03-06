@@ -96,9 +96,9 @@
                                 <span class="address">2001,Strawinskylaan Amsterdam, <br>North Holland, Netherlands.
                                 </span>
                                 <a
-                                    href="mailto:support@nexus-travel.agency"
+                                    href="mailto:support@travel-plan.agency"
                                     class="email"
-                                >support@nexus-travel.agency</a>
+                                >support@travel-plan.agency</a>
                             </span>
 
                           </span>

@@ -35,7 +35,7 @@
 
     $secBtnText = "Get in touch";
 
-    $secBtnUrl = "https://nexus-travel.agency/visa-apply";
+    $secBtnUrl = "https://travel-plan.agency/visa-apply";
 
     $secId = "1";
 
@@ -69,7 +69,7 @@
 
             'btnText' => 'Get in touch',
 
-            'btnUrl' => 'https://nexus-travel.agency/contact-us',
+            'btnUrl' => 'https://travel-plan.agency/contact-us',
 
         ]
     @endphp

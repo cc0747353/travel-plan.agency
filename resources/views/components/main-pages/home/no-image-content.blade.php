@@ -17,7 +17,7 @@
         @isset($section['blockquote'])
             <blockquote class="blockquote-style-one mb-5 mt-5">
                 <p>{{ $section['blockquote']['content'] }}. </p>
-                <a href="https://nexus-travel.agency/visa-apply" class="theme-btn -dark-blue-light">{{ $section['blockquote']['btnText'] }}</a>
+                <a href="https://travel-plan.agency/visa-apply" class="theme-btn -dark-blue-light">{{ $section['blockquote']['btnText'] }}</a>
             </blockquote>
         @endisset
 

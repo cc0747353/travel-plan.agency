@@ -16,7 +16,7 @@
             <div class="inner-box">
               <span class="icon"><img src="images/icons/letter.svg" alt=""></span>
               <h4>Email</h4>
-              <p><a href="#">contact@nexus-travel.agency</a></p>
+              <p><a href="#">contact@travel-plan.agency</a></p>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@
         Travel Plan\'s comprehensive suite of services.',
         'keywords' => 'job board, overseas jobs, Visa application, Residency permit, relocation services, flights, hotels,
         apartments, car rentals, Travel Plan',
-        'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
+        'ogImage' => 'https://travel-plan.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -23,7 +23,7 @@
         thrive in the international job market.',
         'keywords' => 'Travel Plan, mission statement, values, team, global mobility, job seekers, employers, relocation
         assistance',
-        'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
+        'ogImage' => 'https://travel-plan.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -31,7 +31,7 @@
         'title' => 'Get in Touch with Travel Plan: We\'re Here to Help.',
         'description' => 'Have questions or need assistance? Reach out to our friendly team for personalized support.',
         'keywords' => 'contact Travel Plan, customer support, inquiries, relocation advice, job search help',
-        'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
+        'ogImage' => 'https://travel-plan.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -40,7 +40,7 @@
         'description' => 'Dive into expert tips, industry trends, and inspiring stories to navigate the international job market
         and relocation process successfully.',
         'keywords' => 'Travel Plan blog, career advice, relocation tips, international job market, expat life',
-        'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
+        'ogImage' => 'https://travel-plan.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -49,7 +49,7 @@
         'description' => 'Browse thousands of exciting job opportunities worldwide. Start your journey to a fulfilling career
         abroad today!',
         'keywords' => 'international jobs, job search, overseas careers, Travel Plan job board, career opportunities',
-        'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
+        'ogImage' => 'https://travel-plan.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -59,7 +59,7 @@
         permits, flights, accommodation, and more.',
         'keywords' => 'Visa application, Residency permit, relocation services, flights, hotels, apartments, car rentals,
         Travel Plan services',
-        'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
+        'ogImage' => 'https://travel-plan.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -67,7 +67,7 @@
         'title' => 'Travel Plan: Terms of Service: Read Before Using Our Platform.',
         'description' => 'Ensure a smooth and compliant experience by understanding our terms of service.',
         'keywords' => 'terms of service, user agreement, legal terms, Travel Plan terms, privacy policy',
-        'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
+        'ogImage' => 'https://travel-plan.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -75,7 +75,7 @@
         'title' => 'Your Data is Secure: Travel Plan Privacy Policy.',
         'description' => 'Learn how Travel Plan protects your personal information and respects your privacy.',
         'keywords' => 'privacy policy, data protection, privacy, user data, Travel Plan privacy',
-        'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
+        'ogImage' => 'https://travel-plan.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -83,7 +83,7 @@
         'title' => 'Join Travel Plan - Unlock Your Global Career Journey',
         'description' => 'Sign up for free and explore a world of possibilities with Travel Plan. Find your dream job, navigate visa complexities, and settle seamlessly in your new destination.',
         'keywords' => 'register, Travel Plan, job search, visa application, relocation assistance',
-        'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
+        'ogImage' => 'https://travel-plan.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -91,7 +91,7 @@
         'title' => 'Welcome Back to Travel Plan - Access Your Personalized Dashboard',
         'description' => 'Log in to your Travel Plan account and manage your job applications, track visa progress, and access relocation resources with ease.',
         'keywords' => 'login, Travel Plan, job search, visa application, relocation assistance',
-        'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
+        'ogImage' => 'https://travel-plan.agency/images/index-13/header/test.png',
 
         ],
 
@@ -100,7 +100,7 @@
         'title' => 'Recover Your Access - Reset Your Travel Plan Password',
         'description' => 'Don\'t worry if you\'ve forgotten your password. Enter your email address and we\'ll help you regain access to your Travel Plan account.',
         'keywords' => 'forgot password, Travel Plan, job search, visa application, relocation assistance',
-        'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
+        'ogImage' => 'https://travel-plan.agency/images/index-13/header/test.png',
         ],
 
         //dashboard page
@@ -112,7 +112,7 @@
         permits, flights, accommodation, and more.',
         'keywords' => 'Visa application, Residency permit, relocation services, flights, hotels, apartments, car rentals,
         Travel Plan services',
-        'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
+        'ogImage' => 'https://travel-plan.agency/images/index-13/header/test.png',
         ],
 
 

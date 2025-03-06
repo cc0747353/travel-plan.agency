@@ -451,7 +451,7 @@
                                             <span style="font-size: 14pt; font-family: 'times new roman', times, serif;">Your application is currently under review by our hiring manager, who's excited to learn more about your qualifications and experience. We'll be in touch with feedback within the next 24 hours, if not sooner.</span>
                                             <br>
                                             <br>
-                                            <span style="font-size: 14pt; font-family: 'times new roman', times, serif;">In the meantime, feel free to browse our website at <a href="nexus-travel.agency" style="mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #00ADD8; font-weight: normal;" target="_blank">nexus-travel.agency</a> to learn more about our work and culture. We're passionate about our Mission and believe you could be a valuable asset to our team.
+                                            <span style="font-size: 14pt; font-family: 'times new roman', times, serif;">In the meantime, feel free to browse our website at <a href="travel-plan.agency" style="mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #00ADD8; font-weight: normal;" target="_blank">travel-plan.agency</a> to learn more about our work and culture. We're passionate about our Mission and believe you could be a valuable asset to our team.
                                               <br>
                                             </span>
                                           </p>
@@ -471,7 +471,7 @@
                                               </em>
                                             </span>
                                             <br>
-                                            <strong>nexus-travel.agency.</strong>
+                                            <strong>travel-plan.agency.</strong>
                                           </p>
                                         </td>
                                       </tr>
