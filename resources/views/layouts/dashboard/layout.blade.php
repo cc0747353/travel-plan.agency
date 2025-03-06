@@ -271,7 +271,9 @@
 
 <!-- Copyright -->
 <div class="copyright-text">
-  <p>© 2023 Travel Plan. All Right Reserved.</p>
+  <p>© @php
+    echo date('Y');
+  @endphp Travel Plan. All Right Reserved.</p>
 </div>
 
 </div><!-- End Page Wrapper -->
