@@ -11,7 +11,7 @@
         alt=""
       ></figure>
     <div class="auto-container">
-        <p>Nexustravels’ immigration lawyers are ready to work with you to remove the stress from any immigration
+        <p>Travel Plans’ immigration lawyers are ready to work with you to remove the stress from any immigration
             process, maximising your chances of a successful outcome.</p>
         <p>If you are planning to visit, reside or extend your stay in the UK, our specialist advisers are
             here to help you and your family with our tailored immigration advice services.</p>

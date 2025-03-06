@@ -221,7 +221,7 @@
                                                         style="font-size: 14px; line-height: 170%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">
                                                         Best regards, <br><strong>Martin Alderton,
                                                             <i>C.E.O.</i></strong>
-                                                        <br><strong>Nexustravel</strong>
+                                                        <br><strong>Travel Plan</strong>
                                                     </td>
                                                 </tr>
                                             </tbody>

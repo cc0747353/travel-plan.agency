@@ -6,7 +6,7 @@
                 <div class="col-lg-12">
                     <div class="hero-content">
                         <h1>Your Gateway to a <span>New Life in the Netherlands.</span></h1>
-                        <p><span>Embark on a</span> journey of opportunity and success, <span>in the Netherlands</span> with Nexustravel.</p>
+                        <p><span>Embark on a</span> journey of opportunity and success, <span>in the Netherlands</span> with Travel Plan.</p>
 
                     </div>
                 </div>

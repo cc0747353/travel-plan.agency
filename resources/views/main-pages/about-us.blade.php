@@ -68,7 +68,7 @@
             </div>
             <!-- Fun Fact Section -->
 
-            <x-main-pages.about.about-section title="Weaving Dreams Across Borders" text1="Nexustravel wasn't born on a map, but in the hearts of passionate individuals who believed in the power of connecting talent with opportunity, regardless of borders. Our story began with a simple idea: to bridge the gap between ambitious individuals and thriving companies, wherever they may be." text2="From our humble beginnings, we've blossomed into a vibrant community, connecting over 4 million daily users across the globe with exciting opportunities in diverse industries. We've witnessed dreams take flight in bustling metropolises, idyllic coastal towns, and every corner of the world in between. Every successful job placement, every visa secured, every cultural bridge crossed - these are the milestones that mark our journey, a testament to the transformative power of global connection" text3="Today, Nexustravel stands not just as a platform, but as a symbol of possibility. We're a testament to the boundless potential that lies within each individual, waiting to be unleashed on a global stage. As we continue to weave our web of connections, we invite you to join us in our mission. Let's rewrite the narrative of careers, one international success story at a time"/>
+            <x-main-pages.about.about-section title="Weaving Dreams Across Borders" text1="Travel Plan wasn't born on a map, but in the hearts of passionate individuals who believed in the power of connecting talent with opportunity, regardless of borders. Our story began with a simple idea: to bridge the gap between ambitious individuals and thriving companies, wherever they may be." text2="From our humble beginnings, we've blossomed into a vibrant community, connecting over 4 million daily users across the globe with exciting opportunities in diverse industries. We've witnessed dreams take flight in bustling metropolises, idyllic coastal towns, and every corner of the world in between. Every successful job placement, every visa secured, every cultural bridge crossed - these are the milestones that mark our journey, a testament to the transformative power of global connection" text3="Today, Travel Plan stands not just as a platform, but as a symbol of possibility. We're a testament to the boundless potential that lies within each individual, waiting to be unleashed on a global stage. As we continue to weave our web of connections, we invite you to join us in our mission. Let's rewrite the narrative of careers, one international success story at a time"/>
 
 
             </div>
@@ -81,11 +81,11 @@
             <div class="sec-title text-center">
                 <h2>Where Borders Blur and Dreams Take Flight?</h2>
                 <div class="text">
-                    Imagine a world where talent knows no bounds, where ambition transcends borders, and opportunities bloom like vibrant blossoms across every continent. This is the world Nexustravel invites you to explore – not just a job board, but a springboard to launch your international odyssey.
+                    Imagine a world where talent knows no bounds, where ambition transcends borders, and opportunities bloom like vibrant blossoms across every continent. This is the world Travel Plan invites you to explore – not just a job board, but a springboard to launch your international odyssey.
                 </div>
 
                 <div class="text">
-                    We're not simply connecting you with jobs; we're weaving a tapestry of possibilities, each thread a chance to paint your own masterpiece on the global canvas. Whether you're a seasoned maestro seeking a new concerto or a budding virtuoso eager to debut on the world stage, Nexustravel orchestrates your symphony of success.
+                    We're not simply connecting you with jobs; we're weaving a tapestry of possibilities, each thread a chance to paint your own masterpiece on the global canvas. Whether you're a seasoned maestro seeking a new concerto or a budding virtuoso eager to debut on the world stage, Travel Plan orchestrates your symphony of success.
                 </div>
             </div>
 
@@ -104,7 +104,7 @@
                         [
                             "image" => "/images/resource/work-2.png",
                             "title" => "Beyond the Application Curtain",
-                            "text" => "But Nexustravel isn't content simply opening doors. We're your backstage crew, ensuring your resume shines under the spotlight. Our intuitive interface guides you through the application process with the grace of a seasoned impresario. Upload your CV, let our resume polisher work its magic, and watch as your skills take center stage before the captivated audience of potential employers"
+                            "text" => "But Travel Plan isn't content simply opening doors. We're your backstage crew, ensuring your resume shines under the spotlight. Our intuitive interface guides you through the application process with the grace of a seasoned impresario. Upload your CV, let our resume polisher work its magic, and watch as your skills take center stage before the captivated audience of potential employers"
                         ],
                         [
                             "image" => "/images/resource/work-3.png",
@@ -114,17 +114,17 @@
                         [
                             "image" => "/images/resource/work-1.png",
                             "title" => "More Than a Job, a Bridge",
-                            "text" => "Nexustravel knows that a dream job often comes with a symphony of logistical challenges. Fear not, intrepid traveler! We're your one-stop visa whisperer, your residence permit alchemist, and your flight-booking fairy godmother. We'll smooth the wrinkles out of immigration forms, conjure up the perfect apartment in your new city, and whisk you away on the wings of convenience to your new destination."
+                            "text" => "Travel Plan knows that a dream job often comes with a symphony of logistical challenges. Fear not, intrepid traveler! We're your one-stop visa whisperer, your residence permit alchemist, and your flight-booking fairy godmother. We'll smooth the wrinkles out of immigration forms, conjure up the perfect apartment in your new city, and whisk you away on the wings of convenience to your new destination."
                         ],
                         [
                             "image" => "/images/resource/work-2.png",
                             "title" => "A World of Welcome",
-                            "text" => "Landing in a new country can feel like stepping onto a stage with an unfamiliar script. But with Nexustravel, you'll never have to face the spotlight alone. Our network of local partners extends a warm hand, offering language courses, cultural insights, and a community of like-minded adventurers who've already mastered the art of navigating their own global journeys"
+                            "text" => "Landing in a new country can feel like stepping onto a stage with an unfamiliar script. But with Travel Plan, you'll never have to face the spotlight alone. Our network of local partners extends a warm hand, offering language courses, cultural insights, and a community of like-minded adventurers who've already mastered the art of navigating their own global journeys"
                         ],
                         [
                             "image" => "/images/resource/work-3.png",
                             "title" => "A Chorus of Success Stories",
-                            "text" => "The Nexustravel stage isn't just a platform for individual achievements; it's a testament to the transformative power of global connections. We're proud to be the stage where Maria, a passionate coder from Mexico, landed her dream job at a Silicon Valley tech giant. We celebrate with Akash, a young engineer from India, who used our platform to secure a life-changing internship in Germany. These are just a few notes in the grand symphony of Nexustravel success stories, each one a testament to the power of ambition, opportunity, and a little bit of our magic."
+                            "text" => "The Travel Plan stage isn't just a platform for individual achievements; it's a testament to the transformative power of global connections. We're proud to be the stage where Maria, a passionate coder from Mexico, landed her dream job at a Silicon Valley tech giant. We celebrate with Akash, a young engineer from India, who used our platform to secure a life-changing internship in Germany. These are just a few notes in the grand symphony of Travel Plan success stories, each one a testament to the power of ambition, opportunity, and a little bit of our magic."
                         ]
                     ]
                 @endphp
@@ -151,9 +151,9 @@
         <section class="work-section style-two">
             <div class="auto-container">
             <div class="sec-title text-center">
-                <h2>Why Register as a Candidate on Nexustravel?</h2>
+                <h2>Why Register as a Candidate on Travel Plan?</h2>
                 <div class="text">
-                    Are you a driven professional seeking to launch your career in the vibrant Netherlands? Look no further than Nexustravel, your one-stop platform to connect with exciting opportunities and build a fulfilling future. Forget the limitations of traditional job boards – here, you'll discover a curated selection of positions across diverse industries and locations, perfectly aligned with your skills and aspirations.
+                    Are you a driven professional seeking to launch your career in the vibrant Netherlands? Look no further than Travel Plan, your one-stop platform to connect with exciting opportunities and build a fulfilling future. Forget the limitations of traditional job boards – here, you'll discover a curated selection of positions across diverse industries and locations, perfectly aligned with your skills and aspirations.
                 </div>
             </div>
 
@@ -179,7 +179,7 @@
             <div class="auto-container">
             <div class="sec-title text-center">
                 <h2>How It Works?</h2>
-                <div class="text">Ready to ditch the map and navigate your own global career adventure? <br>Buckle up, because Nexustravel's got your compass! <br> Here's how it works</div>
+                <div class="text">Ready to ditch the map and navigate your own global career adventure? <br>Buckle up, because Travel Plan's got your compass! <br> Here's how it works</div>
             </div>
 
             @php
@@ -223,7 +223,7 @@
                     [
                         "image" => "/images/resource/work-7.png",
                         "title" => "Step 7: Climb Your Global Ladder",
-                        "text" => "The journey doesn't stop here! Nexustravel stays by your side. Access exclusive career resources, skill-up with curated workshops, and connect with mentors who've already conquered their global goals."
+                        "text" => "The journey doesn't stop here! Travel Plan stays by your side. Access exclusive career resources, skill-up with curated workshops, and connect with mentors who've already conquered their global goals."
                     ],
 
                 ]
@@ -254,8 +254,8 @@
             <div class="testimonial-right"><img src="images/resource/testimonial-right.png" alt=""></div> --}}
             <!-- Sec Title -->
             <div class="sec-title text-center">
-                <h2>The Nexustravel Dream Team: Your Global Compass
-                <div class="text">At Nexustravel, we believe that building a world without professional borders requires more than just technology.<br> It takes a dedicated team of passionate individuals who share our vision of empowering talent around the globe. <br>Meet the dream team behind the platform</div>
+                <h2>The Travel Plan Dream Team: Your Global Compass
+                <div class="text">At Travel Plan, we believe that building a world without professional borders requires more than just technology.<br> It takes a dedicated team of passionate individuals who share our vision of empowering talent around the globe. <br>Meet the dream team behind the platform</div>
             </div>
 
             <div class="carousel-outer">
@@ -283,7 +283,7 @@
                             "image" => "/images/resource/teams/ethan_claasen.jpg",
                             "name" => "Ethan Classen",
                             "designation" => "CEO, Visionary Leader",
-                            "description" => "Our fearless leader, with a strategic mind and a heart for global connection, guides Nexustravel towards a future where talent knows no bounds."
+                            "description" => "Our fearless leader, with a strategic mind and a heart for global connection, guides Travel Plan towards a future where talent knows no bounds."
                         ],
                         [
                             "image" => "/images/resource/teams/sourav_chhokar.jpg",
@@ -404,7 +404,7 @@
             <!-- Sec Title -->
             <div class="sec-title text-center">
                 <h2>Where Dreams Take Flight - Testimonials</h2>
-                <div class="text">From navigating visa applications to landing their dream jobs across the globe, Nexustravel has helped countless individuals achieve their career aspirations. Here's what they have to say</div>
+                <div class="text">From navigating visa applications to landing their dream jobs across the globe, Travel Plan has helped countless individuals achieve their career aspirations. Here's what they have to say</div>
             </div>
 
             <div class="carousel-outer">
@@ -417,36 +417,36 @@
                                 "image" => "/images/resource/testimonials/testi-thumb-1.jpg",
                                 "name" => "Akash (India),",
                                 "designation" => "Software Engineer",
-                                "description" => "I landed my dream job in Silicon Valley, thanks to Nexustravel's expert career coaching and personalized job recommendations. They even helped me navigate the visa process!",
-                                "title" => "Nexustravel wasn't just a platform, it was a launchpad!"
+                                "description" => "I landed my dream job in Silicon Valley, thanks to Travel Plan's expert career coaching and personalized job recommendations. They even helped me navigate the visa process!",
+                                "title" => "Travel Plan wasn't just a platform, it was a launchpad!"
                             ],
                             [
                                 "image" => "/images/resource/testimonials/testi-thumb-2.jpg",
                                 "name" => "Maria (Mexico),",
                                 "designation" => "Marketing Manager",
-                                "description" => "I never thought I'd work in Paris. Nexustravel not only helped me find the perfect job, but their relocation support made the transition seamless. Now, I'm living the croissant dream!",
-                                "title" => "From Tokyo to Paris, Nexustravel opened the world to me."
+                                "description" => "I never thought I'd work in Paris. Travel Plan not only helped me find the perfect job, but their relocation support made the transition seamless. Now, I'm living the croissant dream!",
+                                "title" => "From Tokyo to Paris, Travel Plan opened the world to me."
                             ],
                             [
                                 "image" => "/images/resource/testimonials/testi-thumb-3.jpg",
                                 "name" => "Hiro (Japan),",
                                 "designation" => "Cultural Consultant",
-                                "description" => "Nexustravel's community is incredible. I've connected with professionals from all over the world, sharing experiences and supporting each other's journeys. It's like having a global family.",
+                                "description" => "Travel Plan's community is incredible. I've connected with professionals from all over the world, sharing experiences and supporting each other's journeys. It's like having a global family.",
                                 "title" => "More than a job, it's a global community."
                             ],
                             [
                                 "image" => "/images/resource/testimonials/testi-thumb-4.jpg",
                                 "name" => "Emily (USA),",
                                 "designation" => "Graphic Designer",
-                                "description" => "I was stuck in a dead-end job. Nexustravel's career guidance helped me discover my passion for graphic design. Now, I'm freelancing for clients around the globe!",
+                                "description" => "I was stuck in a dead-end job. Travel Plan's career guidance helped me discover my passion for graphic design. Now, I'm freelancing for clients around the globe!",
                                 "title" => "They believed in me before I even did."
                             ],
                             [
                                 "image" => "/images/resource/testimonials/testi-thumb-5.jpg",
                                 "name" => "Omar (Egypt),",
                                 "designation" => "Remote Entrepreneur",
-                                "description" => "Nexustravel gave me the freedom to work from anywhere. Their visa and relocation support helped me find my perfect island home, and their global network keeps me connected to clients worldwide.",
-                                "title" => "The world is my office, thanks to Nexustravel."
+                                "description" => "Travel Plan gave me the freedom to work from anywhere. Their visa and relocation support helped me find my perfect island home, and their global network keeps me connected to clients worldwide.",
+                                "title" => "The world is my office, thanks to Travel Plan."
                             ]
                         ]
                     @endphp

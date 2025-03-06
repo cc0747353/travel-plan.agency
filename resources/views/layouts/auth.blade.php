@@ -8,98 +8,98 @@
         $pagesmeta = [
         [
         'url' => route('home'),
-        'title' => 'Nexustravel: Your Gateway to Opportunity and Mobility',
+        'title' => 'Travel Plan: Your Gateway to Opportunity and Mobility',
         'description' => 'Find your dream job abroad, navigate Visa and Residency applications, and plan your relocation with
-        Nexustravel\'s comprehensive suite of services.',
+        Travel Plan\'s comprehensive suite of services.',
         'keywords' => 'job board, overseas jobs, Visa application, Residency permit, relocation services, flights, hotels,
-        apartments, car rentals, Nexustravel',
+        apartments, car rentals, Travel Plan',
         'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
         'url' => route('about-us'),
-        'title' => 'Nexustravel: Who We Are and What We Do.',
-        'description' => 'Discover Nexustravel\'s mission, values, and team. Learn how we help individuals and businesses
+        'title' => 'Travel Plan: Who We Are and What We Do.',
+        'description' => 'Discover Travel Plan\'s mission, values, and team. Learn how we help individuals and businesses
         thrive in the international job market.',
-        'keywords' => 'Nexustravel, mission statement, values, team, global mobility, job seekers, employers, relocation
+        'keywords' => 'Travel Plan, mission statement, values, team, global mobility, job seekers, employers, relocation
         assistance',
         'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
         'url' => route('contact-us'),
-        'title' => 'Get in Touch with Nexustravel: We\'re Here to Help.',
+        'title' => 'Get in Touch with Travel Plan: We\'re Here to Help.',
         'description' => 'Have questions or need assistance? Reach out to our friendly team for personalized support.',
-        'keywords' => 'contact Nexustravel, customer support, inquiries, relocation advice, job search help',
+        'keywords' => 'contact Travel Plan, customer support, inquiries, relocation advice, job search help',
         'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
         'url' => route('blog'),
-        'title' => 'Nexustravel Blog: Insights for Your Global Career.',
+        'title' => 'Travel Plan Blog: Insights for Your Global Career.',
         'description' => 'Dive into expert tips, industry trends, and inspiring stories to navigate the international job market
         and relocation process successfully.',
-        'keywords' => 'Nexustravel blog, career advice, relocation tips, international job market, expat life',
+        'keywords' => 'Travel Plan blog, career advice, relocation tips, international job market, expat life',
         'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
         'url' => route('job-listing'),
-        'title' => 'Nexustravel: Find Your Dream Job Abroad.',
+        'title' => 'Travel Plan: Find Your Dream Job Abroad.',
         'description' => 'Browse thousands of exciting job opportunities worldwide. Start your journey to a fulfilling career
         abroad today!',
-        'keywords' => 'international jobs, job search, overseas careers, Nexustravel job board, career opportunities',
+        'keywords' => 'international jobs, job search, overseas careers, Travel Plan job board, career opportunities',
         'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
         'url' => route('services'),
-        'title' => 'Nexustravel: Our Services: Your Global Mobility Partner.',
+        'title' => 'Travel Plan: Our Services: Your Global Mobility Partner.',
         'description' => 'Simplify your relocation with our comprehensive services, including Visa applications, Residency
         permits, flights, accommodation, and more.',
         'keywords' => 'Visa application, Residency permit, relocation services, flights, hotels, apartments, car rentals,
-        Nexustravel services',
+        Travel Plan services',
         'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
         'url' => route('terms'),
-        'title' => 'Nexustravel: Terms of Service: Read Before Using Our Platform.',
+        'title' => 'Travel Plan: Terms of Service: Read Before Using Our Platform.',
         'description' => 'Ensure a smooth and compliant experience by understanding our terms of service.',
-        'keywords' => 'terms of service, user agreement, legal terms, Nexustravel terms, privacy policy',
+        'keywords' => 'terms of service, user agreement, legal terms, Travel Plan terms, privacy policy',
         'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
         'url' => route('privacy-policy'),
-        'title' => 'Your Data is Secure: Nexustravel Privacy Policy.',
-        'description' => 'Learn how Nexustravel protects your personal information and respects your privacy.',
-        'keywords' => 'privacy policy, data protection, privacy, user data, Nexustravel privacy',
+        'title' => 'Your Data is Secure: Travel Plan Privacy Policy.',
+        'description' => 'Learn how Travel Plan protects your personal information and respects your privacy.',
+        'keywords' => 'privacy policy, data protection, privacy, user data, Travel Plan privacy',
         'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
         'url' => route('register'),
-        'title' => 'Join Nexustravel - Unlock Your Global Career Journey',
-        'description' => 'Sign up for free and explore a world of possibilities with Nexustravel. Find your dream job, navigate visa complexities, and settle seamlessly in your new destination.',
-        'keywords' => 'register, Nexustravel, job search, visa application, relocation assistance',
+        'title' => 'Join Travel Plan - Unlock Your Global Career Journey',
+        'description' => 'Sign up for free and explore a world of possibilities with Travel Plan. Find your dream job, navigate visa complexities, and settle seamlessly in your new destination.',
+        'keywords' => 'register, Travel Plan, job search, visa application, relocation assistance',
         'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
         'url' => route('login'),
-        'title' => 'Welcome Back to Nexustravel - Access Your Personalized Dashboard',
-        'description' => 'Log in to your Nexustravel account and manage your job applications, track visa progress, and access relocation resources with ease.',
-        'keywords' => 'login, Nexustravel, job search, visa application, relocation assistance',
+        'title' => 'Welcome Back to Travel Plan - Access Your Personalized Dashboard',
+        'description' => 'Log in to your Travel Plan account and manage your job applications, track visa progress, and access relocation resources with ease.',
+        'keywords' => 'login, Travel Plan, job search, visa application, relocation assistance',
         'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
 
         ],
 
         [
         'url' => route('password.request'),
-        'title' => 'Recover Your Access - Reset Your Nexustravel Password',
-        'description' => 'Don\'t worry if you\'ve forgotten your password. Enter your email address and we\'ll help you regain access to your Nexustravel account.',
-        'keywords' => 'forgot password, Nexustravel, job search, visa application, relocation assistance',
+        'title' => 'Recover Your Access - Reset Your Travel Plan Password',
+        'description' => 'Don\'t worry if you\'ve forgotten your password. Enter your email address and we\'ll help you regain access to your Travel Plan account.',
+        'keywords' => 'forgot password, Travel Plan, job search, visa application, relocation assistance',
         'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
@@ -107,11 +107,11 @@
 
         [
         'url' => route('dashboard'),
-        'title' => 'Nexustravel: Your Global Mobility Partner.',
+        'title' => 'Travel Plan: Your Global Mobility Partner.',
         'description' => 'Simplify your relocation with our comprehensive services, including Visa applications, Residency
         permits, flights, accommodation, and more.',
         'keywords' => 'Visa application, Residency permit, relocation services, flights, hotels, apartments, car rentals,
-        Nexustravel services',
+        Travel Plan services',
         'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 

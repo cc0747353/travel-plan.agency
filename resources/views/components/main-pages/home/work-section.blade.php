@@ -5,7 +5,7 @@
             <div class="col-lg-5">
                 <div class="sec-title text-center">
                     <h2><b>What we can do for you</b></h2>
-                    <div class="text">With Nexustravel as your guide, you can:
+                    <div class="text">With Travel Plan as your guide, you can:
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                         "icon-wrap" => "yellow",
                         "icon" => "doc",
                         "title" => "Embrace a Seamless Relocation Experience",
-                        "content" => "Settling in a new country can be daunting, but with Nexustravel, you're never alone. We offer practical assistance with everything from finding your ideal home and navigating transportation systems to accessing essential services and immersing yourself in the vibrant Dutch culture."
+                        "content" => "Settling in a new country can be daunting, but with Travel Plan, you're never alone. We offer practical assistance with everything from finding your ideal home and navigating transportation systems to accessing essential services and immersing yourself in the vibrant Dutch culture."
                     ],
 
                     [
@@ -47,7 +47,7 @@
                         "icon-wrap" => "red",
                         "icon" => "case",
                         "title" => "Connect and Thrive in a Multilingual Environment",
-                        "content" => "Communication is key, and at Nexustravel, we speak your language. Our team offers multilingual support, ensuring you feel understood and empowered throughout your journey."
+                        "content" => "Communication is key, and at Travel Plan, we speak your language. Our team offers multilingual support, ensuring you feel understood and empowered throughout your journey."
                     ],
                 ];
             @endphp

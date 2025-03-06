@@ -19,7 +19,7 @@
                     [
                         "name" => "introduction",
                         "title" => "Introduction",
-                        "content" => "These Terms and Conditions \"Terms\" govern your use of the website and services offered by <b>Nexustravel</b> \"Nexustravel\", \"we\", \"us\", or \"our\". By accessing or using the website or any of the services, you agree to be bound by these Terms. If you do not agree to all of the Terms, you may not use the website or any of the services."
+                        "content" => "These Terms and Conditions \"Terms\" govern your use of the website and services offered by <b>Travel Plan</b> \"Travel Plan\", \"we\", \"us\", or \"our\". By accessing or using the website or any of the services, you agree to be bound by these Terms. If you do not agree to all of the Terms, you may not use the website or any of the services."
                     ],
 
                     [
@@ -71,15 +71,15 @@
                         "sub_content" => [
                             [
                                 "title" => "Job Listings",
-                                "content" => "<b>Nexustravel</b> provides access to a database of job listings from various sources. <b>Nexustravel</b> does not guarantee the accuracy or completeness of the job listings."
+                                "content" => "<b>Travel Plan</b> provides access to a database of job listings from various sources. <b>Travel Plan</b> does not guarantee the accuracy or completeness of the job listings."
                             ],
                             [
                                 "title" => "Job Applications",
-                                "content" => "You may submit job applications through the website. <b>Nexustravel</b> does not guarantee that your job applications will be received or considered by potential employers."
+                                "content" => "You may submit job applications through the website. <b>Travel Plan</b> does not guarantee that your job applications will be received or considered by potential employers."
                             ],
                             [
                                 "title" => "Fees",
-                                "content" => "<b>Nexustravel</b> may charge fees for certain job search services. The fees will be clearly displayed on the website."
+                                "content" => "<b>Travel Plan</b> may charge fees for certain job search services. The fees will be clearly displayed on the website."
                             ]
                         ]
                     ],
@@ -89,11 +89,11 @@
                         "sub_content" => [
                             [
                                 "title" => "Visa Information",
-                                "content" => "<b>Nexustravel</b> provides information about visa requirements and application processes for various countries. <b>Nexustravel</b> does not guarantee the accuracy or completeness of the visa information."
+                                "content" => "<b>Travel Plan</b> provides information about visa requirements and application processes for various countries. <b>Travel Plan</b> does not guarantee the accuracy or completeness of the visa information."
                             ],
                             [
                                 "title" => "Visa Assistance",
-                                "content" => "<b>Nexustravel</b> may offer visa application assistance services for a fee. The services may include:
+                                "content" => "<b>Travel Plan</b> may offer visa application assistance services for a fee. The services may include:
                                     * Reviewing your visa application materials.
                                     * Providing guidance on completing the visa application form.
                                     * Assisting with document translation and legalization.
@@ -101,7 +101,7 @@
                             ],
                             [
                                 "title" => "Visa Approval",
-                                "content" => "<b>Nexustravel</b> does not guarantee that your visa application will be approved. The decision to grant or deny a visa is solely at the discretion of the immigration authorities."
+                                "content" => "<b>Travel Plan</b> does not guarantee that your visa application will be approved. The decision to grant or deny a visa is solely at the discretion of the immigration authorities."
                             ]
                         ]
                     ],
@@ -181,7 +181,7 @@
 
 
             <div class="sec-title text-center" style="margin-top: 50px">
-                <h2>Nexustravel Terms of Service</h2>
+                <h2>Travel Plan Terms of Service</h2>
                 <div class="text">Effective Date: January 1, 2023</div>
                 <p style="font-weight: 700">
                     {!! $terms_and_conditions['0']['content'] !!}

@@ -170,7 +170,7 @@
                                                 <tr>
                                                     <td
                                                         style="padding: 0 0 16px 0; font-size: 14px; line-height: 150%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">
-                                                        We encourage you to stay connected with Nexustravel through social media and our careers page for future opportunities that might be a better fit.
+                                                        We encourage you to stay connected with Travel Plan through social media and our careers page for future opportunities that might be a better fit.
                                                     </td>
                                                 </tr>
 
@@ -195,8 +195,8 @@
                                                     <td
                                                         style="font-size: 14px; line-height: 170%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">
                                                         Best regards, <br><strong>Martin Alderton,
-                                                            <i>The Nexustravel Recruitment Team</i></strong>
-                                                        <br><strong>Nexustravel</strong>
+                                                            <i>The Travel Plan Recruitment Team</i></strong>
+                                                        <br><strong>Travel Plan</strong>
                                                     </td>
                                                 </tr>
                                             </tbody>

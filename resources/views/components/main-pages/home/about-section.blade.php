@@ -60,7 +60,7 @@
                 <div class="wow fadeInLeft mb-5">
                     <div class="sec-title">
                         <h4 class="fw-700">Dream of launching your career in the heart of Europe?</h4>
-                        <div class="text mt-30">Nexustravel is more than just a job board. We are your one-stop shop for building a fulfilling future in the Netherlands. We understand the complexities of relocating to a new country, and we're here to guide you every step of the way, from landing your dream job to settling into your new home.</div>
+                        <div class="text mt-30">Travel Plan is more than just a job board. We are your one-stop shop for building a fulfilling future in the Netherlands. We understand the complexities of relocating to a new country, and we're here to guide you every step of the way, from landing your dream job to settling into your new home.</div>
                     </div>
                     <a
                         href="/register"
@@ -71,7 +71,7 @@
                 <div class="wow fadeInLeft">
                     <div class="sec-title">
                         <h4 class="fw-700">Paving Your Path to Professional Fulfillment.</h4>
-                        <div class="text mt-30">Driven by this unwavering conviction, Nexustravel was born. We're not just a job board; we're your trusted partner, your personal navigator on the journey from global talent to Dutch triumph. We understand the complexities of relocating and starting anew in a foreign land. The anxieties, the uncertainties, the sheer magnitude of the leap – we've been there. That's why we've woven a comprehensive support system, tailored to your individual needs, to ensure your journey is not just smooth, but remarkably rewarding.</div>
+                        <div class="text mt-30">Driven by this unwavering conviction, Travel Plan was born. We're not just a job board; we're your trusted partner, your personal navigator on the journey from global talent to Dutch triumph. We understand the complexities of relocating and starting anew in a foreign land. The anxieties, the uncertainties, the sheer magnitude of the leap – we've been there. That's why we've woven a comprehensive support system, tailored to your individual needs, to ensure your journey is not just smooth, but remarkably rewarding.</div>
                     </div>
                 </div>
             </div>
