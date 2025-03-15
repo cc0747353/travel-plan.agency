@@ -86,14 +86,14 @@
                         <div class="col-lg-6 btn-box" style="padding: 10px">
                             <div class="text" style="color: white; padding: 10px" >Explore our extensive job board and find your perfect fit.
                             </div>
-                            <button type="submit" class="theme-btn btn-style-one"><span class="btn-title">Find Jobs</span></button>
+                            <a href="/job-listing" class="theme-btn btn-style-one">Find Jobs</a>
                         </div>
 
-                        <div class="col-lg-6 btn-box" style="padding: 10px">
+                        {{-- <div class="col-lg-6 btn-box" style="padding: 10px">
                             <div class="text" style="color: white; padding: 10px" >Get expert assistance with your visa and residence permit.
                             </div>
                             <button type="submit" class="theme-btn btn-style-one"><span class="btn-title">Apply for Visa</span></button>
-                        </div>
+                        </div> --}}
 
                     </div>
 
