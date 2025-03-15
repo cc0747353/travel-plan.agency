@@ -2,437 +2,322 @@
 
 namespace Database\Seeders;
 
-use App\Models\Job;
-use Carbon\Carbon;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use DOMDocument;
-use DOMXPath;
-use App\Models\Location;
-
+use App\Models\Job;
+use Illuminate\Support\Facades\DB;
 
 class JobSeeder extends Seeder
 {
     /**
      * Run the database seeds.
+     *
+     * @return void
      */
-    public function run(): void
+    public function run()
     {
-        $classes = [
-            "job" => "ember-view jobs-search-results__list-item occludable-update p0 relative scaffold-layout__list-item",
-            "logo" => "ivm-view-attr__img--centered EntityPhoto-square-4 evi-image lazy-image ember-view",
-            "title" => "disabled ember-view job-card-container__link job-card-list__title",
-            "company" => "job-card-container__primary-description",
-            "location" => "job-card-container__metadata-item",
+        $jobs = [
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "Young's Excavating & Paving, LLC",
+                'jobLocation' => "Loudon, NH",
+                'title' => "Construction Laborer",
+                'description' => "Ø *Offloading the truck and gathering tools for the day*. Ø *Sweeping and cleaning the area in front of the paver*. Ø Having customer service skills.",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$20 - $28 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "TRI-SPEC CONSTRUCTION",
+                'jobLocation' => "Dededo, GU",
+                'title' => "Skilled Construction Laborer",
+                'description' => "Perform specialized tasks in their trade, like complex electrical work or advanced plumbing, with precision. We are looking for skilled construction laborers in…",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$18 - $25 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "DeWind One-Pass Trenching",
+                'jobLocation' => "Holland, MI",
+                'title' => "Construction Laborer",
+                'description' => "Loading equipment, travel to job site, unload equipment, assemble/disassemble equipment, obtaining mud samples, clean equipment, preventative maintenance…",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$22 - $50 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "Perfetto Pastures",
+                'jobLocation' => "Staten Island, NY",
+                'title' => "Construction Laborer",
+                'description' => "Operate basic hand and power tools safely and efficiently. Load and unload construction materials and equipment. $45 per hour + prevailing wage projects.",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$45 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "Scott Construction Inc",
+                'jobLocation' => "Wisconsin Dells, WI",
+                'title' => "General Laborer",
+                'description' => "Employee must comply with applicable DOT, OSHA, CDL and any other regulatory required certification or recertification requirements, including physical exams…",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$20.40 - $22.00 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "Razor",
+                'jobLocation' => "Belcourt, ND",
+                'title' => "Construction Laborer",
+                'description' => "Clean and prepare construction sites. Past experience working on construction job sites. Load and unload construction supplies.",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "Estimated: $38.7K - $49.5K a year",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "SB Construction",
+                'jobLocation' => "Santa Barbara, CA",
+                'title' => "Construction Worker",
+                'description' => "Previous experience in construction or a related field (preferred but not required). Operate hand tools and power tools safely and effectively.",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$25 - $45 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "DeRudder Excavating",
+                'jobLocation' => "Lakeville, MN",
+                'title' => "Construction Laborer",
+                'description' => "Ability to work in various weather conditions and physically demanding environments. Shoveling of material, installing fabric. Job Types: Full-time, Part-time.",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$20 - $25 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "Scruggs",
+                'jobLocation' => "Hahira, GA",
+                'title' => "Laborers",
+                'description' => "Valid Georgia driver's license preferred. Placement of asphalt using hand or power tools including - shovel, rake, pick hammer, tamp, saw.",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "Estimated: $32.8K - $38.4K a year",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "Nutter Enterprises",
+                'jobLocation' => "Belmont, NH",
+                'title' => "Construction Laborer",
+                'description' => "You must have a clean driving license/record and be able to pass a drug test. Looking for laborer familiar with pipe, masonry and erosion control work.",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$23 - $28 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "Huttopia",
+                'jobLocation' => "Hancock, MA",
+                'title' => "Construction Laborer",
+                'description' => "Confident with tools use (circular saw, drills, screwdriver, compressed-air tools, …). Forklift certification would be a plus.",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$19 - $23 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "HM Waters Construction, LLC",
+                'jobLocation' => "Pikeville, NC",
+                'title' => "Construction Laborer",
+                'description' => "Previous experience in construction or a related field is required; willingness to learn is essential. Operate hand tools and power tools safely and efficiently…",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "From $20 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "Altamirano General Construction",
+                'jobLocation' => "Santa Barbara, CA",
+                'title' => "General Construction Laborer",
+                'description' => "Operate hand tools and power tools safely and effectively. Familiarity with hand tools, power tools, and safety equipment is advantageous.",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$21 - $24 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "CDI Contractors LLC",
+                'jobLocation' => "Kilgore, TX",
+                'title' => "Laborer",
+                'description' => "They include, but are not limited to, general clean up, traffic control/flagging, assisting with light forming, general carpentry duties, and concrete…",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "Estimated: $34.1K - $40.7K a year",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "Barnett Renovation",
+                'jobLocation' => "Willard, OH",
+                'title' => "General Construction Laborer",
+                'description' => "Previous experience in construction or a related field is preferred but not required. Familiarity with basic hand tools and power tools is a plus.",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$18 - $40 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "Flat & Phillips LLC",
+                'jobLocation' => "Loveland, CO",
+                'title' => "General Construction Laborer",
+                'description' => "Previous experience in construction or a related field is preferred but not required; willingness to learn is essential.",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$19 - $25 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "JRM Contracting",
+                'jobLocation' => "Huntersville, NC",
+                'title' => "Construction Laborer",
+                'description' => "Operate hand tools and power tools under supervision while adhering to safety protocols. Familiarity with basic hand tools and power tools is a plus.",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$18 - $22 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "Can Do Contracting &amp; Remodeling LLC",
+                'jobLocation' => "Morton, PA",
+                'title' => "Construction Laborer",
+                'description' => "Small home remodeling company looking for a full time or part time, temporary laborer with the possibility of becoming permanent very rapidly.",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$125 - $200 a day",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "JMC Equipment Rental",
+                'jobLocation' => "Talofofo, GU",
+                'title' => "Construction Laborer/Helper",
+                'description' => "Ability to use hand tools, power tools, and equipment safely. Clear and prepare construction sites for work by removing waste, digging trenches, and leveling…",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$12.00 - $14.33 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
+            [
+                'location_id' => rand(33, 42),
+                'companyName' => "Newport Hospital and Health Services",
+                'jobLocation' => "Newport, WA",
+                'title' => "CONSTRUCTION WORKER",
+                'description' => "Demonstrates the ability to communicate with patients, guests and staff in a courteous, respectful and helpful manner. Day shift, 80 hours per pay period.",
+                'responsibilities' => "",
+                'requirements' => "",
+                'experiences' => "",
+                'duties' => "",
+                'benefits' => "",
+                'salary' => "$27.42 - $38.62 an hour",
+                'deadline' => date('Y-m-d', mt_rand(strtotime('2025-03-21'), strtotime('2025-04-04'))),
+                'postedDate' => date('Y-m-d', mt_rand(strtotime('2025-01-27'), strtotime('2025-02-12'))),
+            ],
         ];
 
-        $html = file_get_contents(public_path('jobs-linkedin.html'));
-        $jobs = $this->extractJobData($html);
-        $amsterdamJobs = $this->getAmsterdamJobs($classes);
-        $montrealJobs = $this->getMontrealJobs($classes);
-        $utretchJobs = $this->getUtretchJobs($classes);
-        $netherlandConstructionJobs = $this->getNetherlandConstructionJobs($classes);
-
-
-        foreach ($jobs as $job) {
-
-            Job::create($job);
-        }
-
-        foreach ($amsterdamJobs as $job) {
-
-            Job::create($job);
-        }
-
-        foreach ($montrealJobs as $job) {
-
-            Job::create($job);
-        }
-
-        foreach ($utretchJobs as $job) {
-
-            Job::create($job);
-        }
-
-        foreach ($netherlandConstructionJobs as $job) {
-
-            Job::create($job);
-        }
+        DB::table('jobs')->insert($jobs);
     }
-
-    public function extractJobData($html)
-    {
-        // Create a new DOMDocument object
-        $dom = new DOMDocument();
-
-        // suppress warning messages g
-        libxml_use_internal_errors(true);
-
-        // Load the HTML content into the DOMDocument
-        $dom->loadHTML($html);
-
-        // restore error handling
-        libxml_use_internal_errors(false);
-
-        // Create an XPath object to query the DOMDocument
-        $xpath = new DOMXPath($dom);
-
-        // Query the DOMDocument to get all div elements with the class "section-jobs-item"
-        $divs = $xpath->query('//li[contains(@class, "scaffold-layout__list-item")]');
-
-        // Initialize an array to store the job data
-        $jobs = [];
-
-        // Loop through each div element and extract the job data
-        foreach ($divs as $div) {
-            // Extract the job data from the div element
-
-            $logo = $xpath->evaluate('string(.//div[@class="company-logo-oo"]/img/@src)', $div);
-            if (!$logo) {
-                $logo = "https://www.jobsinnetwork.com/images/default.png";
-            }
-            //card-job-body-title
-            // Example code to extract the job title
-            // i want to clear all whitespaces
-
-            $title = $xpath->evaluate('string(.//a[@class="job-title-oo"])', $div);
-
-            // Example code to extract the job description
-            // $description = $xpath->evaluate('string(.//p)', $div);
-
-
-            $description = $xpath->evaluate('string(.//p[@class="card-job-body-description"])', $div);
-
-            $companyName = $xpath->evaluate('string(.//span[@class="company-name-oo"])', $div);
-            $jobLocation = $xpath->evaluate('string(.//li[@class="job-location-oo"])', $div);
-
-
-            $startDate = Carbon::create(2023, 12, 7);
-            $endDate = Carbon::create(now());
-
-            $deadlineStartDate = Carbon::create(2023, 12, 18);
-            $deadlineEndDate = Carbon::create(2024, 3, 21);
-
-
-            $fromSalaryRange = rand(5000, 40000);
-            $fromSalaryRange = ceil($fromSalaryRange / 5000) * 5000;
-            if ($fromSalaryRange < 25000) {
-                $fromSalaryRange = 25000;
-            }
-
-            $toSalaryRange = rand($fromSalaryRange + 5000, 100000);
-            $toSalaryRange = floor($toSalaryRange / 5000) * 5000;
-
-            $fromSalaryFormatted = number_format($fromSalaryRange / 1000, 0) . 'k';
-            $toSalaryFormatted = number_format($toSalaryRange / 1000, 0) . 'k';
-
-            $salary = "$fromSalaryFormatted - $toSalaryFormatted";
-
-            // get location where name is Greece
-            $location = Location::where('name', 'Rhodes')->first();
-
-            // Create an array to store the job data
-            $jobData = [
-                'location_id' => $location->id,
-                'companyLogo' => $logo,
-                'title' => $title,
-                // 'description' => $description,
-                'companyName' => $companyName,
-                'jobLocation' => $jobLocation,
-                'deadline' => $deadlineStartDate->copy()->addDays(rand(0, $deadlineEndDate->diffInDays($deadlineStartDate))),
-
-                'postedDate' => $startDate->copy()->addDays(rand(0, $endDate->diffInDays($startDate))),
-                'salary' => $salary,
-
-                // Add more fields as needed
-            ];
-
-            // Add the job data to the array
-            $jobs[] = $jobData;
-        }
-
-        // Return the array of job data
-        return $jobs;
-    }
-
-
-    public function getAmsterdamJobs($jobClasses)
-    {
-        $html = file_get_contents(public_path('jobs/amsterdam.html'));
-        $dom = new DOMDocument();
-        libxml_use_internal_errors(true);
-        $dom->loadHTML($html);
-        libxml_use_internal_errors(false);
-
-        $xpath = new DOMXPath($dom);
-
-        $jobCardClass = $jobClasses['job'];
-
-        $jobElements = $xpath->query("//li[contains(@class, '$jobCardClass')]");
-
-        $amsterdamJobs = [];
-
-        foreach ($jobElements as $jobElement) {
-            $logo = $xpath->evaluate('string(.//div[@class="ivm-view-attr__img-wrapper display-flex"]/img/@src)', $jobElement);
-            $logo = $logo ?: "https://www.jobsinnetwork.com/images/default.png";
-
-            $title = $xpath->evaluate('string(.//a[@class="disabled ember-view job-card-container__link job-card-list__title"])', $jobElement);
-            $description = $xpath->evaluate('string(.//p[@class="card-job-body-description"])', $jobElement);
-            $companyName = $xpath->evaluate('string(.//span[@class="job-card-container__primary-description"])', $jobElement);
-            $jobLocation = $xpath->evaluate('string(.//li[@class="job-card-container__metadata-item"])', $jobElement);
-
-            $startDate = Carbon::create(2023, 12, 7);
-            $endDate = Carbon::create(now());
-            $deadlineStartDate = Carbon::create(2023, 12, 18);
-            $deadlineEndDate = Carbon::create(2024, 3, 21);
-            $fromSalaryRange = rand(5000, 40000);
-            $fromSalaryRange = ceil($fromSalaryRange / 5000) * 5000;
-            $fromSalaryRange = $fromSalaryRange < 25000 ? 25000 : $fromSalaryRange;
-            $toSalaryRange = rand($fromSalaryRange + 5000, 100000);
-            $toSalaryRange = floor($toSalaryRange / 5000) * 5000;
-            $fromSalaryFormatted = number_format($fromSalaryRange / 1000, 0) . 'k';
-            $toSalaryFormatted = number_format($toSalaryRange / 1000, 0) . 'k';
-            $salary = "$fromSalaryFormatted - $toSalaryFormatted";
-            $location = Location::where('name', 'Amsterdam')->first();
-
-            $jobData = [
-                'location_id' => $location->id,
-                'companyLogo' => $logo,
-                'title' => $title,
-                'description' => $description,
-                'companyName' => $companyName,
-                'jobLocation' => $jobLocation,
-                'deadline' => $deadlineStartDate->copy()->addDays(rand(0, $deadlineEndDate->diffInDays($deadlineStartDate))),
-                'postedDate' => $startDate->copy()->addDays(rand(0, $endDate->diffInDays($startDate))),
-                'salary' => $salary,
-            ];
-
-            $amsterdamJobs[] = $jobData;
-        }
-
-        return $amsterdamJobs;
-    }
-
-    // add method for Montreal
-    // file location: public/jobs/amsterdam.html
-    public function getMontrealJobs($jobClasses)
-    {
-        // Load the HTML content into the DOMDocument
-        $html = file_get_contents(public_path('jobs/montreal.html'));
-        $dom = new DOMDocument();
-        libxml_use_internal_errors(true);
-        $dom->loadHTML($html);
-        libxml_use_internal_errors(false);
-
-        // Create an XPath object to query the DOMDocument
-        $xpath = new DOMXPath($dom);
-
-        // Retrieve the class names for the job card and job logo
-        $jobCardClass = $jobClasses['job'];
-        $jobLogoClass = $jobClasses['logo'];
-        $jobTitleClass = $jobClasses['title'];
-        $jobCompanyClass = $jobClasses['company'];
-        $jobLocationClass = $jobClasses['location'];
-
-        // Query the DOMDocument to get all li elements with the specified job card class
-        $jobElements = $xpath->query("//li[contains(@class, '$jobCardClass')]");
-
-        // Initialize an array to store the job data
-        $montrealJobs = [];
-
-        // Loop through each job element and extract the job data
-        foreach ($jobElements as $jobElement) {
-            // Extract the job data from the job element
-            $logo = $xpath->evaluate('string(.//div[@class="ivm-view-attr__img-wrapper display-flex"]/img/@src)', $jobElement);
-            $logo = $logo ?: "https://www.jobsinnetwork.com/images/default.png";
-
-            $title = $xpath->evaluate('string(.//a[@class="disabled ember-view job-card-container__link job-card-list__title"])', $jobElement);
-            $description = $xpath->evaluate('string(.//p[@class="card-job-body-description"])', $jobElement);
-            $companyName = $xpath->evaluate('string(.//span[@class="job-card-container__primary-description"])', $jobElement);
-            $jobLocation = $xpath->evaluate('string(.//li[@class="job-card-container__metadata-item"])', $jobElement);
-
-            // Perform additional data processing and formatting
-            $startDate = Carbon::create(2023, 12, 7);
-            $endDate = Carbon::create(now());
-            $deadlineStartDate = Carbon::create(2023, 12, 18);
-            $deadlineEndDate = Carbon::create(2024, 3, 21);
-            $fromSalaryRange = rand(5000, 40000);
-            $fromSalaryRange = ceil($fromSalaryRange / 5000) * 5000;
-            $fromSalaryRange = $fromSalaryRange < 25000 ? 25000 : $fromSalaryRange;
-            $toSalaryRange = rand($fromSalaryRange + 5000, 100000);
-            $toSalaryRange = floor($toSalaryRange / 5000) * 5000;
-            $fromSalaryFormatted = number_format($fromSalaryRange / 1000, 0) . 'k';
-            $toSalaryFormatted = number_format($toSalaryRange / 1000, 0) . 'k';
-            $salary = "$fromSalaryFormatted - $toSalaryFormatted";
-            $location = Location::where('name', 'Montreal')->first();
-
-            $jobData = [
-                'location_id' => $location->id,
-                'companyLogo' => $logo,
-                'title' => $title,
-                'description' => $description,
-                'companyName' => $companyName,
-                'jobLocation' => $jobLocation,
-                'deadline' => $deadlineStartDate->copy()->addDays(rand(0, $deadlineEndDate->diffInDays($deadlineStartDate))),
-                'postedDate' => $startDate->copy()->addDays(rand(0, $endDate->diffInDays($startDate))),
-                'salary' => $salary,
-            ];
-
-            // Add the job data to the Montreal jobs array
-            $montrealJobs[] = $jobData;
-        }
-
-        return $montrealJobs;
-    }
-
-    //Utretch
-    //public/jobs/utretch.html
-
-    public function getUtretchJobs($jobClasses)
-    {
-
-        // Load the HTML content into the DOMDocument
-        $html = file_get_contents(public_path('jobs/utretch.html'));
-        $dom = new DOMDocument();
-        libxml_use_internal_errors(true);
-        $dom->loadHTML($html);
-        libxml_use_internal_errors(false);
-
-        // Create an XPath object to query the DOMDocument
-        // Create an XPath object to query the DOMDocument
-        $xpath = new DOMXPath($dom);
-
-        // Retrieve the class names for the job card and job logo
-        $jobCardClass = $jobClasses['job'];
-        $jobLogoClass = $jobClasses['logo'];
-        $jobTitleClass = $jobClasses['title'];
-        $jobCompanyClass = $jobClasses['company'];
-        $jobLocationClass = $jobClasses['location'];
-
-        // Query the DOMDocument to get all li elements with the specified job card class
-        $jobElements = $xpath->query("//li[contains(@class, '$jobCardClass')]");
-
-        // Initialize an array to store the job data
-        $utretchJobs = [];
-
-        // Loop through each job element and extract the job data
-        foreach ($jobElements as $jobElement) {
-            // Extract the job data from the job element
-            $logo = $xpath->evaluate('string(.//div[@class="ivm-view-attr__img-wrapper display-flex"]/img/@src)', $jobElement);
-            $logo = $logo ?: "https://www.jobsinnetwork.com/images/default.png";
-
-            $title = $xpath->evaluate('string(.//a[@class="disabled ember-view job-card-container__link job-card-list__title"])', $jobElement);
-            $description = $xpath->evaluate('string(.//p[@class="card-job-body-description"])', $jobElement);
-            $companyName = $xpath->evaluate('string(.//span[@class="job-card-container__primary-description"])', $jobElement);
-            $jobLocation = $xpath->evaluate('string(.//li[@class="job-card-container__metadata-item"])', $jobElement);
-
-            // Perform additional data processing and formatting
-            $startDate = Carbon::create(2023, 12, 7);
-            $endDate = Carbon::create(now());
-            $deadlineStartDate = Carbon::create(2023, 12, 18);
-            $deadlineEndDate = Carbon::create(2024, 3, 21);
-            $fromSalaryRange = rand(5000, 40000);
-            $fromSalaryRange = ceil($fromSalaryRange / 5000) * 5000;
-            $fromSalaryRange = $fromSalaryRange < 25000 ? 25000 : $fromSalaryRange;
-            $toSalaryRange = rand($fromSalaryRange + 5000, 100000);
-            $toSalaryRange = floor($toSalaryRange / 5000) * 5000;
-            $fromSalaryFormatted = number_format($fromSalaryRange / 1000, 0) . 'k';
-            $toSalaryFormatted = number_format($toSalaryRange / 1000, 0) . 'k';
-            $salary = "$fromSalaryFormatted - $toSalaryFormatted";
-            $location = Location::where('name', 'Utrecht')->first();
-
-            $jobData = [
-                'location_id' => $location->id,
-                'companyLogo' => $logo,
-                'title' => $title,
-                'description' => $description,
-                'companyName' => $companyName,
-                'jobLocation' => $jobLocation,
-                'deadline' => $deadlineStartDate->copy()->addDays(rand(0, $deadlineEndDate->diffInDays($deadlineStartDate))),
-                'postedDate' => $startDate->copy()->addDays(rand(0, $endDate->diffInDays($startDate))),
-                'salary' => $salary,
-            ];
-
-            // Add the job data to the Montreal jobs array
-            $utretchJobs[] = $jobData;
-        }
-
-        return $utretchJobs;
-
-    }
-
-    public function getNetherlandConstructionJobs($jobClasses)
-    {
-        // Load the HTML content into the DOMDocument
-        $html = file_get_contents(public_path('jobs/netherlands-construction.html'));
-        $dom = new DOMDocument();
-        libxml_use_internal_errors(true);
-        $dom->loadHTML($html);
-        libxml_use_internal_errors(false);
-
-        // Create an XPath object to query the DOMDocument
-        $xpath = new DOMXPath($dom);
-
-        // Retrieve the class names for the job card and job logo
-        $jobCardClass = $jobClasses['job'];
-        $jobLogoClass = $jobClasses['logo'];
-        $jobTitleClass = $jobClasses['title'];
-        $jobCompanyClass = $jobClasses['company'];
-        $jobLocationClass = $jobClasses['location'];
-
-        // Query the DOMDocument to get all li elements with the specified job card class
-        $jobElements = $xpath->query("//li[contains(@class, '$jobCardClass')]");
-
-        // Initialize an array to store the job data
-        $netherlandsConstructionJobs = [];
-
-        // Loop through each job element and extract the job data
-        foreach ($jobElements as $jobElement) {
-            // Extract the job data from the job element
-            $logo = $xpath->evaluate('string(.//div[@class="ivm-view-attr__img-wrapper display-flex"]/img/@src)', $jobElement);
-            $logo = $logo ?: "https://www.jobsinnetwork.com/images/default.png";
-
-            $title = $xpath->evaluate('string(.//a[@class="disabled ember-view job-card-container__link job-card-list__title"])', $jobElement);
-            $description = $xpath->evaluate('string(.//p[@class="card-job-body-description"])', $jobElement);
-            $companyName = $xpath->evaluate('string(.//span[@class="job-card-container__primary-description"])', $jobElement);
-            $jobLocation = $xpath->evaluate('string(.//li[@class="job-card-container__metadata-item"])', $jobElement);
-
-            // Perform additional data processing and formatting
-            $startDate = Carbon::create(2023, 12, 7);
-            $endDate = Carbon::create(now());
-            $deadlineStartDate = Carbon::create(2023, 12, 18);
-            $deadlineEndDate = Carbon::create(2024, 3, 21);
-            $fromSalaryRange = rand(5000, 40000);
-            $fromSalaryRange = ceil($fromSalaryRange / 5000) * 5000;
-            $fromSalaryRange = $fromSalaryRange < 25000 ? 25000 : $fromSalaryRange;
-            $toSalaryRange = rand($fromSalaryRange + 5000, 100000);
-            $toSalaryRange = floor($toSalaryRange / 5000) * 5000;
-            $fromSalaryFormatted = number_format($fromSalaryRange / 1000, 0) . 'k';
-            $toSalaryFormatted = number_format($toSalaryRange / 1000, 0) . 'k';
-            $salary = "$fromSalaryFormatted - $toSalaryFormatted";
-            $location = Location::where('name', 'Netherlands')->first();
-
-            $jobData = [
-                'location_id' => $location->id,
-                'companyLogo' => $logo,
-                'title' => $title,
-                'description' => $description,
-                'companyName' => $companyName,
-                'jobLocation' => $jobLocation,
-                'deadline' => $deadlineStartDate->copy()->addDays(rand(0, $deadlineEndDate->diffInDays($deadlineStartDate))),
-                'postedDate' => $startDate->copy()->addDays(rand(0, $endDate->diffInDays($startDate))),
-                'salary' => $salary,
-            ];
-
-            // Add the job data to the Netherlands construction jobs array
-            $netherlandsConstructionJobs[] = $jobData;
-        }
-
-        return $netherlandsConstructionJobs;
-    }
-
-
-
 }
-
-
