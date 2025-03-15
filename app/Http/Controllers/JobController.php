@@ -12,9 +12,9 @@ class JobController extends Controller
      */
     public function index()
     {
-        // get all the jobs in the jobs table with its companies, ordered by latest creation date
-    
-        $jobs = Job::with('company')->orderBy('created_at', 'desc')->get();
+        // get all the jobs in the jobs table with its companies
+
+        $jobs = Job::with('company')->get();
         return view('jobs.index', compact('jobs'));
     }
 

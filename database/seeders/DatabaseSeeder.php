@@ -39,14 +39,6 @@ class DatabaseSeeder extends Seeder
             'email_verified_at' => now(),
 
         ]);
-        
-        \App\Models\User::factory()->create([
-            'name' => 'admin',
-            'email' => 'mercyjenet9@gmail.com',
-            'password' => Hash::make('QsxfT32.'),
-            'email_verified_at' => now(),
-
-        ]);
 
         // $this->call(CompanySeeder::class);
 
