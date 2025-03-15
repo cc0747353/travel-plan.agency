@@ -65,15 +65,17 @@ class MainPageController extends Controller
         return view('main-pages.contact-us');
     }
 
-    //jobListing
     public function jobListing()
     {
-        //get all jobs and paginate 60
-
-        $jobs = Job::paginate(60);
-
-        return view('main-pages.job-listing',['jobs' => $jobs]);
+        //get all jobs sorted by latest and paginate 60
+    
+        $jobs = Job::orderBy('created_at', 'asc') // Sort by created_at in descending order (latest first)
+            ->paginate(60); // Paginate the results, displaying 60 jobs per page
+    
+        return view('main-pages.job-listing', ['jobs' => $jobs]);
     }
+    
+    
 
     //work-visa
     public function workVisa()
