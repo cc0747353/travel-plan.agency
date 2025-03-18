@@ -14,39 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        \App\Models\User::factory()->create([
-            'name' => 'Regular User',
-            'email' => 'unlayeremail4now@gmail.com',
-            'password' => Hash::make('password'),
-            'email_verified_at' => now(),
-
-        ]);
-
-        \App\Models\User::factory()->create([
-            'name' => 'admin',
-            'email' => 'great.chriz@gmail.com',
-            'password' => Hash::make('password'),
-            'email_verified_at' => now(),
-
-        ]);
-
-        \App\Models\User::factory()->create([
-            'name' => 'Anagor Lucky',
-            'email' => 'anagorlucky@gmail.com',
-            'password' => Hash::make('Anagor12345'),
-            'email_verified_at' => now(),
-
-        ]);
-
-        \App\Models\User::factory()->create([
-            'name' => 'admin',
-            'email' => 'mercyjenet9@gmail.com',
-            'password' => Hash::make('QsxfT32.'),
-            'email_verified_at' => now(),
-
-        ]);
 
         // $this->call(CompanySeeder::class);
 
