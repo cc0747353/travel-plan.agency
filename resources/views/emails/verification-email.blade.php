@@ -22,34 +22,25 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="v1v1m_5708741520830668687px-24"
-                                                        style="padding: 24px 32px 24px 32px;" align="left">
+                                                        style="padding: 15px;" align="left">
                                                         <a
                                                             href="https://travel-plan.agency/"
-                                                            target="_blank" rel="noopener noreferrer"> <img
+                                                            target="_blank" rel="noopener noreferrer">
+                                                            <img
                                                                 class="v1v1m_5708741520830668687logo v1v1CToWUd"
                                                                 style="border: 0px; line-height: 100%; outline: none; display: block; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 16px; width: 572px; text-decoration: none;"
-                                                                src="/cpsess6746539128/3rdparty/roundcube/?_task=mail&amp;_id=212623971867d982fa5cbfb&amp;_action=display-attachment&amp;_file=rcmfile11742308094017732100"
-                                                                alt="Namecheap" width="172" height="89"
-                                                                border="0" /> <img
-                                                                class="v1v1m_5708741520830668687logo v1v1CToWUd"
-                                                                style="border: 0; line-height: 100%; outline: none; display: none; font-family: 'Open Sans',Arial,Helvetica,sans-serif; font-size: 16px; width: 172px; text-decoration: none; color: #f14722!important;"
                                                                 src="https://travel-plan.agency/email-logo.png"
-                                                                alt="Namecheap" width="172" border="0" /> </a>
+                                                                alt="Namecheap" width="172" height="89"
+                                                                border="0" />
+
+                                                                <img class="v1v1m_5708741520830668687logo v1v1CToWUd" style="border: 0px; line-height: 100%; outline: none; display: block; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 16px; width: 572px; text-decoration: none;" src="https://travel-plan.agency/email-logo.png" alt="Namecheap" width="172" height="89" border="0" />
+
+                                                        </a>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="v1v1m_5708741520830668687fluid"
-                            style="width: 640px; border-collapse: collapse!important;" border="0" width="640"
-                            cellspacing="0" cellpadding="0" align="center">
-                            <tbody>
-                                <tr>
-                                    <td class="v1v1m_5708741520830668687py-0" style="padding: 8px 24px 0px 24px;"
-                                        bgcolor="#ffffff">&nbsp;</td>
                                 </tr>
                             </tbody>
                         </table>
