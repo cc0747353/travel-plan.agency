@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Job;
 use Illuminate\Http\Request;
+use App\Models\Country;
 
 class MainPageController extends Controller
 {
@@ -65,17 +66,31 @@ class MainPageController extends Controller
         return view('main-pages.contact-us');
     }
 
-    public function jobListing()
+
+
+    public function jobListing(Request $request)
     {
-        //get all jobs sorted by latest and paginate 60
-    
-        $jobs = Job::orderBy('created_at', 'asc') // Sort by created_at in descending order (latest first)
-            ->paginate(60); // Paginate the results, displaying 60 jobs per page
-    
-        return view('main-pages.job-listing', ['jobs' => $jobs]);
+        // Get the location filter from the request
+        $countryId = $request->input('country_id');
+
+        // Start building the query
+        $query = Job::orderBy('created_at', 'asc');
+
+        // Apply the location filter if it's provided
+        if ($countryId) {
+            $query->where('country_id', $countryId);
+        }
+
+        // Paginate the results
+        $jobs = $query->paginate(20);
+
+        // Fetch all locations for the filter dropdown
+        $countries = Country::all();
+
+        // Pass the jobs and locations to the view
+        return view('main-pages.job-listing', ['jobs' => $jobs, 'countries' => $countries]);
     }
-    
-    
+
 
     //work-visa
     public function workVisa()

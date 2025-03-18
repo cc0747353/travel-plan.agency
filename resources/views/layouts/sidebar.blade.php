@@ -11,6 +11,9 @@
 
 <x-dashboard.sidebar-nav :active="request()->routeIs('admin.users')" href="{{ route('admin.users') }}" title="Users List" />
 
+<x-dashboard.sidebar-nav :active="request()->routeIs('admin.locations')" href="{{ route('admin.locations') }}" title="location List" />
+
+
 
 
 @else

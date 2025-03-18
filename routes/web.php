@@ -95,6 +95,8 @@ Route::middleware([
     //admin.users.create
     Route::get('/admin/users/create', [\App\Http\Controllers\AdminController::class, 'usersCreate'])->name('admin.users.create');
 
+
+
     //admin.users
     Route::get('/admin/users', [\App\Http\Controllers\AdminController::class, 'users'])->name('admin.users');
 
@@ -123,6 +125,10 @@ Route::middleware([
     //admin.dashboard route is not controller route
     Route::get('/admin/dashboard', [\App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin.dashboard');
 
+    //locations
+
+    //admin.locations
+    Route::get('/admin/locations', [\App\Http\Controllers\AdminController::class, 'locations'])->name('admin.locations');
 
 
 });

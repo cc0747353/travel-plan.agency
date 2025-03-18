@@ -31,8 +31,48 @@ class LocationSeeder extends Seeder
     // get the countries where name is Canada
     $canada = \App\Models\Country::where('name', 'Canada')->first();
 
+    // get the countries where name is Germany
+    $germany = \App\Models\Country::where('name', 'Germany')->first();
+
 
      $locations = [
+
+
+        [
+            'name' => 'Berlin',
+            'country_id' => $germany->id,
+        ],
+
+        [
+            'name' => 'Hamburg',
+            'country_id' => $germany->id,
+        ],
+
+        [
+            'name' => 'Munich',
+            'country_id' => $germany->id,
+        ],
+
+        [
+            'name' => 'Cologne',
+            'country_id' => $germany->id,
+        ],
+
+        [
+            'name' => 'Frankfurt',
+            'country_id' => $germany->id,
+        ],
+
+        [
+            'name' => 'Stuttgart',
+            'country_id' => $germany->id,
+        ],
+
+        [
+            'name' => 'Düsseldorf',
+            'country_id' => $germany->id,
+        ],
+
 
         [
             'name' => 'Epirus',

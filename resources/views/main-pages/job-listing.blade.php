@@ -9,7 +9,7 @@
 
     @section('content')
 
-        <x-job-list>
+        <x-job-list :jobs="$jobs" :countries="$countries">
 
             @foreach ($jobs as $job)
                 <!-- Job Block -->
@@ -65,7 +65,12 @@
                 </div>
             @endforeach
 
-            {{ $jobs->links() }}
+            <nav class="ls-pagination">
+                {{ $jobs->links() }}
+
+
+              </nav>
+
 
         </x-job-list>
 

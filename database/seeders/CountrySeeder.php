@@ -32,6 +32,9 @@ class CountrySeeder extends Seeder
             [
                 'name' => 'Canada',
             ],
+            [
+                'name' => 'Germany',
+            ],
 
         ];
 

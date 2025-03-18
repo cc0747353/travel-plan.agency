@@ -1,777 +1,293 @@
-php artisan make:mail CvRecieved
-
-php artisan make:mail CvAccepted
-
-
-php artisan make:seeder RolePermissionSeeder
-
-
-php artisan make:seeder JobApplicationSeeder
-
-php artisan make:mail EmailVerification
-
-how to access the APP_URL in the .env of my laravel application
-
-php artisan make:model Visa -mrs
-
-php artisan make:factory VisaFactory
-
-<!-- question -->
-add another key value pair to the visaApplicationDetails where by attribute will be "name" and the value will be the name of the array as in full_name, date_of_birth etc
-
-<!-- visaApplicationDetails -->
-
-$visaApplicationDetails = [
-    // Personal Information
-    'full_name' => [
-        'type' => 'text',
-        'label' => 'Full Name:',
-        'placeholder' => 'Your full name',
-        'required' => true,
-    ],
-    'date_of_birth' => [
-        'type' => 'date',
-        'label' => 'Date of Birth:',
-        'required' => true,
-    ],
-    'place_of_birth' => [
-        'type' => 'text',
-        'label' => 'Place of Birth:',
-        'placeholder' => 'Your place of birth',
-        'required' => true,
-    ],
-    'nationality' => [
-        'type' => 'select',
-        'label' => 'Nationality:',
-        'options' => App\Models\Country::all(),
-        'required' => true,
-    ],
-    'current_address' => [
-        'type' => 'textarea',
-        'label' => 'Current Address:',
-        'rows' => 3,
-        'required' => true,
-    ],
-    'email_address' => [
-        'type' => 'email',
-        'label' => 'Email Address:',
-        'placeholder' => 'Your email address',
-        'required' => true,
-    ],
-    'phone_number' => [
-        'type' => 'text',
-        'label' => 'Phone Number:',
-        'placeholder' => 'Your phone number',
-        'required' => true,
-    ],
-
-    // Passport Information
-    'passport_number' => [
-        'type' => 'text',
-        'label' => 'Passport Number:',
-        'placeholder' => 'Your passport number',
-        'required' => true,
-    ],
-    'passport_issue_date' => [
-        'type' => 'date',
-        'label' => 'Passport Issue Date:',
-        'required' => true,
-    ],
-    'passport_expiry_date' => [
-        'type' => 'date',
-        'label' => 'Passport Expiry Date:',
-        'required' => true,
-    ],
-
-    // Travel Information
-    'intended_arrival_date' => [
-        'type' => 'date',
-        'label' => 'Intended Arrival Date:',
-        'required' => true,
-    ],
-    'intended_duration_of_stay' => [
-        'type' => 'number',
-        'label' => 'Intended Duration of Stay:',
-        'placeholder' => 'Number of days',
-        'min' => 1,
-        'required' => true,
-    ],
-    'planned_entry_point' => [
-        'type' => 'text',
-        'label' => 'Planned Entry Point:',
-        'placeholder' => 'Airport or border crossing',
-        'required' => true,
-    ],
-    'planned_exit_point' => [
-        'type' => 'text',
-        'label' => 'Planned Exit Point:',
-        'placeholder' => 'Airport or border crossing',
-        'required' => true,
-    ],
-    'travel_insurance_information' => [
-        'type' => 'textarea',
-        'label' => 'Travel Insurance Information:',
-        'rows' => 3,
-        'placeholder' => 'Details of your travel insurance',
-        'required' => true,
-    ],
-    'accommodation_information' => [
-        'type' => 'textarea',
-        'label' => 'Accommodation Information:',
-        'rows' => 3,
-        'placeholder' => 'Details of your accommodation',
-        'required' => true,
-    ],
-
-    // Employment Information
-    'employer_name' => [
-        'type' => 'text',
-        'label' => 'Employer Name:',
-        'placeholder' => 'Name of your employer',
-        'required' => true,
-    ],
-    'employer_address' => [
-        'type' => 'textarea',
-        'label' => 'Employer Address:',
-        'rows' => 3,
-        'placeholder' => 'Address of your employer',
-        'required' => true,
-    ],
-    'job_title' => [
-        'type' => 'text',
-        'label' => 'Job Title:',
-        'placeholder' => 'Your job title in Estonia',
-        'required' => true,
-    ],
-
-    'employment_start_date' => [
-    'type' => 'date',
-    'label' => 'Employment Start Date:',
-    'required' => true,
-],
-'employment_contract' => [
-    'type' => 'file',
-    'label' => 'Employment Contract:',
-    'accept' => '.pdf,.doc,.docx',
-    'required' => true,
-],
-'salary' => [
-    'type' => 'number',
-    'label' => 'Salary:',
-    'placeholder' => 'Your monthly salary in euros',
-    'required' => true,
-],
-'work_permit_number' => [
-    'type' => 'text',
-    'label' => 'Work Permit Number (Optional):',
-],
-
-// Educational Background
-'highest_level_of_education' => [
-    'type' => 'select',
-    'label' => 'Highest Level of Education:',
-    'options' => [
-        'High school diploma',
-        'Bachelor\'s degree',
-        'Master\'s degree',
-        'Doctorate',
-    ],
-    'required' => true,
-],
-'educational_institution_name' => [
-    'type' => 'text',
-    'label' => 'Educational Institution Name:',
-    'placeholder' => 'Name of your educational institution',
-    'required' => true,
-],
-'educational_institution_address' => [
-    'type' => 'textarea',
-    'label' => 'Educational Institution Address:',
-    'rows' => 3,
-    'placeholder' => 'Address of your educational institution',
-    'required' => true,
-],
-'degree_or_diploma_earned' => [
-    'type' => 'text',
-    'label' => 'Degree or Diploma Earned:',
-    'placeholder' => 'Your degree or diploma',
-    'required' => true,
-],
-
-// Financial Information
-'bank_statements' => [
-    'type' => 'file',
-    'label' => 'Bank Statements (Optional):',
-    'accept' => '.pdf,.doc,.docx,.xls,.xlsx',
-],
-'proof_of_income' => [
-    'type' => 'file',
-    'label' => 'Proof of Income (Optional):',
-    'accept' => '.pdf,.doc,.docx,.xls,.xlsx',
-],
-'tax_returns' => [
-    'type' => 'file',
-    'label' => 'Tax Returns (Optional):',
-    'accept' => '.pdf,.doc,.docx,.xls,.xlsx',
-],
-
-// Additional Information
-'sponsor_name' => [
-    'type' => 'text',
-    'label' => 'Sponsor Name (Optional):',
-    'placeholder' => 'Name of your sponsor',
-],
-'sponsor_address' => [
-    'type' => 'textarea',
-    'label' => 'Sponsor Address (Optional):',
-    'rows' => 3,
-    'placeholder' => 'Address of your sponsor',
-],
-'medical_certificate' => [
-    'type' => 'file',
-    'label' => 'Medical Certificate (Optional):',
-    'accept' => '.pdf,.doc,.docx,.jpg,.jpeg,.png',
-],
-'police_clearance_certificate' => [
-    'type' => 'file',
-    'label' => 'Police Clearance Certificate (Optional):',
-    'accept' => '.pdf,.doc,.docx,.jpg,.jpeg,.png',
-],
-'travel_history' => [
-    'type' => 'textarea',
-    'label' => 'Travel History (Optional):',
-    'rows' => 3,
-    'placeholder' => 'Details of your travel history in the past 5 years',
-],
-'criminal_record' => [
-    'type' => 'textarea',
-    'label' => 'Criminal Record (Optional):',
-    'rows' => 3,
-    'placeholder' => 'Details of any criminal record you may have',
-],
-
-// Other
-'photo_path' => [
-    'type' => 'file',
-    'label' => 'Photo (Optional):',
-    'accept' => '.jpg,.jpeg,.png',
-],
-'declaration_of_truthfulness' => [
-    'type' => 'select',
-    'label' => 'Declaration of Truthfulness:',
-    'options' => [
-        '' => 'Select',
-        'Yes' => 'Yes',
-        'No' => 'No',
-    ],
-    'required' => true,
-],
-];
-
-
-<!-- Date of Birth => date_of_birth -->
-
-how to make a string to be small letter all through and replace space with _
-note im working with laravel php frame work version 10
-
-
-// Question= how to add a key value pair to an array for example, add 'name' => 'full_name' to this full_name array
-//  'full_name' => [
-//         'type' => 'text',
-//         'label' => 'Full Name:',
-//         'placeholder' => 'Your full name',
-//         'required' => true,
-//       ],
-// note im working with laravel php frame work version 10
-
-// answer
-// $full_name = [
-//     'type' => 'text',
-//     'label' => 'Full Name:',
-//     'placeholder' => 'Your full name',
-//     'required' => true,
-// ];
-
-// $full_name['name'] = 'full_name';
-
-// print_r($full_name);
-
-//Question = this is an associative array $formInputs, with different arrays inside it, how can i update the arrays inside the associative array with a value key pair for example, add 'name' => 'full_name' to the full_name array and add 'name' => 'date_of_birth' to the date_of_birth array and add 'name' => 'current_address' to the current_address array and so on for each array. Note: i am working with laravel php frame work version 10. Example of the formInputs array:
-// $formInputs = [
-//     'full_name' => [
-//         'type' => 'text',
-//         'label' => 'Full Name:',
-//         'placeholder' => 'Your full name',
-//         'required' => true,
-//     ],
-//     'date_of_birth' => [
-//         'type' => 'date',
-//         'label' => 'Date of Birth:',
-//         'required' => true,
-//     ],
-//     'place_of_birth' => [
-//         'type' => 'text',
-//         'label' => 'Place of Birth:',
-//         'placeholder' => 'Your place of birth',
-//         'required' => true,
-//     ],
-//     'nationality' => [
-//         'type' => 'select',
-//         'label' => 'Nationality:',
-//         'options' => App\Models\Country::all(),
-//         'required' => true,
-//     ],
-// ];
-
-//  'visa_application_details' => [
-
-i want a regular expression that will mean this
-1, where it matches this: '
-2, and any other character that is upto 5 character or above before it will see another of this character: '
-3, and this character must not be this word: options
-4, and have this character: => [
-
-i want a regular expression that will mean this
-False: => [
-True: [
-
-
-this is an example of a database table of an Item
- $item = [
-    [
-        'id' => 1,
-        'type' => 'text',
-        'label' => 'Full Name:',
-        'placeholder' => 'Your full name',
-        'required' => true,
-    ],
-    [
-        'id' => 2,
-        'type' => 'date',
-        'label' => 'Date of Birth:',
-        'required' => true,
-    ],
-    [
-        'id' => 3,
-        'type' => 'text',
-        'label' => 'Place of Birth:',
-        'placeholder' => 'Your place of birth',
-        'required' => true,
-    ],
-    [
-        'id' => 4,
-        'type' => 'select',
-        'label' => 'Nationality:',
-        'options' => $country = [
-                        'a',
-                        'b',
-                        'c',
-                        'd',
-                        'e'
-                    ],
-        'required' => true,
-    ],
-
- ];
-
- im using laravel version 10, How can i retrieve each of the model instance with its id
- and along with the model instance i want to get its key and value as an array.
- so i can be able to display the key or the value in the blade file.
-
- Ineed a step by step guide on how to accompliush that
-
-
-
-
-
- {{-- $inpts variable from the controller --}}
- <div class="tab-pane fade show active"
-     id="{{ $tabPane['id'] }}" role="tabpanel"
-     aria-labelledby="{{ $tabPane['label'] }}">
-     <form class="edit-profile-form profile-form  mb-60" @disabled(true)>
-         <div class="row">
-
-             {{--  html escape blade rendering --}}
-             @foreach ($inpts as $inpt)
-
-             @endforeach
-         </div>
-     </form>
- </div>
-
-
-{{-- $inpts2 variable from the controller --}}
-<div
- class="tab-pane fade"
- id="profile"
- role="tabpanel"
- aria-labelledby="profile-tab"
->
- <form class="edit-profile-form profile-form" @disabled(true)>
-     <div class="row">
-         {{--  html escape blade rendering --}}
-         @foreach ($inpts2 as $inpt2)
-             <div class="col-md-6">
-                 <div
-                     class="form-inner mb-25">
-                     <label for="{{ $inpt2->id }}">{{ $inpt2->label }}*</label>
-                     <div class="input-area">
-                         <img
-                             src="{{ $inpt2->icon }}"
-                             alt>
-                         <input type="text"
-                             id="{{ $inpt2->id }}"
-                             name="{{ $inpt2->name }}"
-                             value="{{ old($inpt2->name) }}"
-                             placeholder="{{ $inpt2->placeholder }}">
-                     </div>
-                 </div>
-             </div>
-         @endforeach
-         <div class="col-md-6">
-             <div
-                 class="form-inner mb-25">
-                 <label for="country_selector">Select a country here*</label>
-                 <div class="input-area">
-                     {{-- <img
-                         src="assets/images/icon/user-2.svg"
-                         alt> --}}
-                     <input type="text"
-                         style="margin-left: 50px"
-                         id="country_selector"
-                         name="firstname"
-                         >
-                 </div>
-             </div>
-         </div>
-     </div>
- </form>
+<div class="css-in8ucq">
+    <div class="css-12595yo">
+        <ul role="list" id="job-list" tabindex="-1" class="css-13ia03s">
+            <li class="css-0">
+                <div data-jobkey="ew_PRyS0-rCSl-44k4Tmpu04YSg0LSyTtmqW3KbR46CV40pcQt591Q" role="presentation"
+                    data-testid="searchSerpJob" class="css-omjtwj">
+                    <div class="chakra-stack css-1igwmid">
+                        <h2 class="chakra-text css-8rdtm5" data-testid="searchSerpJobTitle"><a
+                                class="chakra-button css-1djbb1k"
+                                data-mdref="/job/ew_PRyS0-rCSl-44k4Tmpu04YSg0LSyTtmqW3KbR46CV40pcQt591Q?jobCardTrackingKey=5-yul1-0-1imkeaekmgb33804-a80f60e95923988e&amp;xkcb=SoC_67M30UUmDUyDix0JbzkdCdPP"
+                                href="/job/ew_PRyS0-rCSl-44k4Tmpu04YSg0LSyTtmqW3KbR46CV40pcQt591Q"
+                                tabindex="0">Housekeeper - Perry Hotel</a></h2>
+                    </div>
+                    <p class="chakra-text css-1sawo7p"><span class="css-lvyu5j"><span data-testid="companyName">Hotel
+                                Investment Services</span>&nbsp;—</span><span data-testid="searchSerpJobLocation"
+                            class="css-1t92pv">Petoskey, MI</span><span aria-label="5 out of 5 stars"
+                            data-testid="searchSerpJobCompanyRating" role="img" class="css-epvm6"><span
+                                aria-hidden="true" class="css-0">5<!-- --> </span><svg aria-hidden="true"
+                                focusable="false" data-prefix="fas" data-icon="star"
+                                class="svg-inline--fa fa-star css-c4tn3a" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg></span></p>
+                    <p class="chakra-text css-jhqp7z" data-testid="searchSerpJobSnippet">As visitors to our historic
+                        destination hotel, guests of the Perry Hotel know they can count on the cleanliness of our
+                        rooms, and our Housekeeping team gets all…</p>
+                    <div class="css-2imjyh">
+                        <p class="chakra-text css-1g1y608" data-testid="searchSerpJobSalaryConfirmed">$14 - $18 an hour
+                        </p>
+                        <div class="css-17xejub"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="css-0">
+                <div data-jobkey="o6q_n9vVDfEvG8bGPov_GNRWbOIQTxAnrSOPoicPzbGZfPCZKILntg" role="presentation"
+                    data-testid="searchSerpJob" class="css-obg9ou">
+                    <div class="chakra-stack css-1igwmid">
+                        <h2 class="chakra-text css-8rdtm5" data-testid="searchSerpJobTitle"><a
+                                class="chakra-button css-1djbb1k"
+                                data-mdref="/job/o6q_n9vVDfEvG8bGPov_GNRWbOIQTxAnrSOPoicPzbGZfPCZKILntg?jobCardTrackingKey=5-yul1-0-1imkeaekmgb33804-0c0905e2c0cfcdaf&amp;xkcb=SoB767M30UUmDXSDix0KbzkdCdPP"
+                                href="/job/o6q_n9vVDfEvG8bGPov_GNRWbOIQTxAnrSOPoicPzbGZfPCZKILntg"
+                                tabindex="0">Housekeeper</a></h2>
+                    </div>
+                    <p class="chakra-text css-1sawo7p"><span class="css-lvyu5j"><span data-testid="companyName">Northern
+                                Hotels Group LLC</span>&nbsp;—</span><span data-testid="searchSerpJobLocation"
+                            class="css-1t92pv">Petoskey, MI</span></p>
+                    <p class="chakra-text css-jhqp7z" data-testid="searchSerpJobSnippet">Your goal is to create a clean
+                        and orderly environment for our guests, ensuring that they will want to return and ultimately
+                        furthering our reputation.</p>
+                    <div class="css-2imjyh">
+                        <div class="css-1b6seq1">
+                            <p class="chakra-text css-1ejkpji" data-testid="searchSerpJobSalaryEst">Estimated: $32.3K -
+                                $35.3K a year</p><button type="button" class="chakra-button css-ttluco"
+                                aria-label="job salary disclaimer" data-testid="searchSerpJobSalaryDisclaimer"
+                                id="popover-trigger-:R539aal9mlajlfbqmH1:" aria-haspopup="dialog" aria-expanded="false"
+                                aria-controls="popover-content-:R539aal9mlajlfbqmH1:"><svg aria-hidden="true"
+                                    focusable="false" data-prefix="fas" data-icon="circle-info"
+                                    class="svg-inline--fa fa-circle-info css-86gbjf" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                        d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z">
+                                    </path>
+                                </svg></button>
+                            <div style="visibility:hidden;position:absolute;min-width:max-content;inset:0 auto auto 0"
+                                class="chakra-popover__popper css-iy22zq">
+                                <section data-testid="searchSerpJobSalaryDisclaimerPopup"
+                                    id="popover-content-:R539aal9mlajlfbqmH1:" tabindex="-1" role="dialog"
+                                    class="chakra-popover__content css-438d7z"
+                                    style="transform-origin:var(--popper-transform-origin);opacity:0;visibility:hidden;transform:scale(0.95) translateZ(0)">
+                                </section>
+                            </div>
+                        </div>
+                        <p class="chakra-text css-u40boz" data-testid="searchSerpJobQuickApply">Quick Apply</p>
+                        <div class="css-17xejub"></div>
+                        <p class="chakra-text css-5yilgw" data-testid="searchSerpJobDateStamp">8d</p>
+                    </div>
+                </div>
+            </li>
+            <li class="css-0">
+                <div data-jobkey="cT3V6UPosQt02UA5js4ZtCaM7U9lGpPbNT7_mmtWYAZwXDIzu8Ba2A" role="presentation"
+                    data-testid="searchSerpJob" class="css-obg9ou">
+                    <div class="chakra-stack css-1igwmid">
+                        <h2 class="chakra-text css-8rdtm5" data-testid="searchSerpJobTitle"><a
+                                class="chakra-button css-1djbb1k"
+                                data-mdref="/job/cT3V6UPosQt02UA5js4ZtCaM7U9lGpPbNT7_mmtWYAZwXDIzu8Ba2A?jobCardTrackingKey=5-yul1-0-1imkeaekmgb33804-279c96cbee07a204&amp;xkcb=SoDc67M30UUmDXSDix0PbzkdCdPP"
+                                href="/job/cT3V6UPosQt02UA5js4ZtCaM7U9lGpPbNT7_mmtWYAZwXDIzu8Ba2A"
+                                tabindex="0">Housekeeper - Bay View Inn</a></h2>
+                    </div>
+                    <p class="chakra-text css-1sawo7p"><span class="css-lvyu5j"><span data-testid="companyName">Hotel
+                                Investment Services</span>&nbsp;—</span><span data-testid="searchSerpJobLocation"
+                            class="css-1t92pv">Petoskey, MI</span><span aria-label="5 out of 5 stars"
+                            data-testid="searchSerpJobCompanyRating" role="img" class="css-epvm6"><span
+                                aria-hidden="true" class="css-0">5<!-- --> </span><svg aria-hidden="true"
+                                focusable="false" data-prefix="fas" data-icon="star"
+                                class="svg-inline--fa fa-star css-c4tn3a" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg></span></p>
+                    <p class="chakra-text css-jhqp7z" data-testid="searchSerpJobSnippet">As visitors to our historic
+                        destination hotel, guests of the Bay View Inn know they can count on the cleanliness of our
+                        rooms, and our Housekeeping team gets…</p>
+                    <div class="css-2imjyh">
+                        <p class="chakra-text css-1g1y608" data-testid="searchSerpJobSalaryConfirmed">$14 - $18 an hour
+                        </p>
+                        <div class="css-17xejub"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="css-0">
+                <div data-jobkey="gstE2J6RzULUqXNEBop1gcsPlXFJhFGrNX1cF7IE2faUq0tD4F9d9w" role="presentation"
+                    data-testid="searchSerpJob" class="css-obg9ou">
+                    <div class="chakra-stack css-1igwmid">
+                        <h2 class="chakra-text css-8rdtm5" data-testid="searchSerpJobTitle"><a
+                                class="chakra-button css-1djbb1k"
+                                data-mdref="/job/gstE2J6RzULUqXNEBop1gcsPlXFJhFGrNX1cF7IE2faUq0tD4F9d9w?jobCardTrackingKey=5-yul1-0-1imkeaekmgb33804-1823985073cff632&amp;xkcb=SoBB67M30UUmDXSDix0MbzkdCdPP"
+                                href="/job/gstE2J6RzULUqXNEBop1gcsPlXFJhFGrNX1cF7IE2faUq0tD4F9d9w" tabindex="0">Laundry
+                                Attendant/Housekeeper</a></h2>
+                    </div>
+                    <p class="chakra-text css-1sawo7p"><span class="css-lvyu5j"><span
+                                data-testid="companyName">AmericInn Hotel &amp; Suites</span>&nbsp;—</span><span
+                            data-testid="searchSerpJobLocation" class="css-1t92pv">Petoskey, MI</span><span
+                            aria-label="3.4 out of 5 stars" data-testid="searchSerpJobCompanyRating" role="img"
+                            class="css-epvm6"><span aria-hidden="true" class="css-0">3.4<!-- --> </span><svg
+                                aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                class="svg-inline--fa fa-star css-c4tn3a" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg></span></p>
+                    <p class="chakra-text css-jhqp7z" data-testid="searchSerpJobSnippet">You will play a vital role in
+                        maintaining the cleanliness and presentation of our facility, contributing to an exceptional
+                        guest experience.</p>
+                    <div class="css-2imjyh">
+                        <p class="chakra-text css-1g1y608" data-testid="searchSerpJobSalaryConfirmed">From $15 an hour
+                        </p>
+                        <p class="chakra-text css-u40boz" data-testid="searchSerpJobQuickApply">Quick Apply</p>
+                        <div class="css-17xejub"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="css-0">
+                <div data-jobkey="iLLfiZNZv8XU6OQboewutauNtU3wgBAi5bAEciXaX5WDbAfS0cEcbQ" role="presentation"
+                    data-testid="searchSerpJob" class="css-obg9ou">
+                    <div class="chakra-stack css-1igwmid">
+                        <h2 class="chakra-text css-8rdtm5" data-testid="searchSerpJobTitle"><a
+                                class="chakra-button css-1djbb1k"
+                                data-mdref="/job/iLLfiZNZv8XU6OQboewutauNtU3wgBAi5bAEciXaX5WDbAfS0cEcbQ?jobCardTrackingKey=5-yul1-0-1imkeaekmgb33804-81a22796d200f525&amp;xkcb=SoCj67M30UUmDXyDix0JbzkdCdPP"
+                                href="/job/iLLfiZNZv8XU6OQboewutauNtU3wgBAi5bAEciXaX5WDbAfS0cEcbQ" tabindex="0">Hotel
+                                Housekeeping</a></h2>
+                    </div>
+                    <p class="chakra-text css-1sawo7p"><span class="css-lvyu5j"><span
+                                data-testid="companyName">AmericInn Hotel &amp; Suites</span>&nbsp;—</span><span
+                            data-testid="searchSerpJobLocation" class="css-1t92pv">Petoskey, MI</span><span
+                            aria-label="3.4 out of 5 stars" data-testid="searchSerpJobCompanyRating" role="img"
+                            class="css-epvm6"><span aria-hidden="true" class="css-0">3.4<!-- --> </span><svg
+                                aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                class="svg-inline--fa fa-star css-c4tn3a" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg></span></p>
+                    <p class="chakra-text css-jhqp7z" data-testid="searchSerpJobSnippet">Clean guest rooms upon
+                        departures, stay overs and turn down service, that meet company standards and exceed guest
+                        expectations. Job Types: Full-time, Part-time.</p>
+                    <div class="css-2imjyh">
+                        <p class="chakra-text css-1g1y608" data-testid="searchSerpJobSalaryConfirmed">$16 - $18 an hour
+                        </p>
+                        <p class="chakra-text css-u40boz" data-testid="searchSerpJobQuickApply">Quick Apply</p>
+                        <div class="css-17xejub"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="css-0">
+                <div data-jobkey="y_nFoF--8nI_oIMQnuE4N0tZE7vRMZC_tr-C_kR4GhAXDyBd3LpcTQ" role="presentation"
+                    data-testid="searchSerpJob" class="css-obg9ou">
+                    <div class="chakra-stack css-1igwmid">
+                        <h2 class="chakra-text css-8rdtm5" data-testid="searchSerpJobTitle"><a
+                                class="chakra-button css-1djbb1k"
+                                data-mdref="/job/y_nFoF--8nI_oIMQnuE4N0tZE7vRMZC_tr-C_kR4GhAXDyBd3LpcTQ?jobCardTrackingKey=5-yul1-0-1imkeaekmgb33804-16aef9cc75ab3a82&amp;xkcb=SoAt67M30UUmDXyDix0ObzkdCdPP"
+                                href="/job/y_nFoF--8nI_oIMQnuE4N0tZE7vRMZC_tr-C_kR4GhAXDyBd3LpcTQ"
+                                tabindex="0">Assistant Housekeeping Manager</a></h2>
+                    </div>
+                    <p class="chakra-text css-1sawo7p"><span class="css-lvyu5j"><span data-testid="companyName">The Inn
+                                at Bay Harbor</span>&nbsp;—</span><span data-testid="searchSerpJobLocation"
+                            class="css-1t92pv">Petoskey, MI</span><span aria-label="3.8 out of 5 stars"
+                            data-testid="searchSerpJobCompanyRating" role="img" class="css-epvm6"><span
+                                aria-hidden="true" class="css-0">3.8<!-- --> </span><svg aria-hidden="true"
+                                focusable="false" data-prefix="fas" data-icon="star"
+                                class="svg-inline--fa fa-star css-c4tn3a" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg></span></p>
+                    <p class="chakra-text css-jhqp7z" data-testid="searchSerpJobSnippet">Work with the front desk and
+                        maintenance departments to address guest concerns related to housekeeping. Conduct regular
+                        inspections of guest rooms, public areas…</p>
+                    <div class="css-2imjyh">
+                        <div class="css-1b6seq1">
+                            <p class="chakra-text css-1ejkpji" data-testid="searchSerpJobSalaryEst">Estimated: $40.6K -
+                                $47.6K a year</p><button type="button" class="chakra-button css-ttluco"
+                                aria-label="job salary disclaimer" data-testid="searchSerpJobSalaryDisclaimer"
+                                id="popover-trigger-:R539aql9mlajlfbqmH1:" aria-haspopup="dialog" aria-expanded="false"
+                                aria-controls="popover-content-:R539aql9mlajlfbqmH1:"><svg aria-hidden="true"
+                                    focusable="false" data-prefix="fas" data-icon="circle-info"
+                                    class="svg-inline--fa fa-circle-info css-86gbjf" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                        d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z">
+                                    </path>
+                                </svg></button>
+                            <div style="visibility:hidden;position:absolute;min-width:max-content;inset:0 auto auto 0"
+                                class="chakra-popover__popper css-iy22zq">
+                                <section data-testid="searchSerpJobSalaryDisclaimerPopup"
+                                    id="popover-content-:R539aql9mlajlfbqmH1:" tabindex="-1" role="dialog"
+                                    class="chakra-popover__content css-438d7z"
+                                    style="transform-origin:var(--popper-transform-origin);opacity:0;visibility:hidden;transform:scale(0.95) translateZ(0)">
+                                </section>
+                            </div>
+                        </div>
+                        <div class="css-17xejub"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="css-0">
+                <div data-jobkey="NcrGH2ojSxM6gxTHlK2NcZgrW4W4GOc-mk9MbUN2F0on_p24vdR4sA" role="presentation"
+                    data-testid="searchSerpJob" class="css-obg9ou">
+                    <div class="chakra-stack css-1igwmid">
+                        <h2 class="chakra-text css-8rdtm5" data-testid="searchSerpJobTitle"><a
+                                class="chakra-button css-1djbb1k"
+                                data-mdref="/job/NcrGH2ojSxM6gxTHlK2NcZgrW4W4GOc-mk9MbUN2F0on_p24vdR4sA?jobCardTrackingKey=5-yul1-0-1imkeaekmgb33804-c739906c36e0268c&amp;xkcb=SoAt67M30UUmDWSDix0JbzkdCdPP"
+                                href="/job/NcrGH2ojSxM6gxTHlK2NcZgrW4W4GOc-mk9MbUN2F0on_p24vdR4sA"
+                                tabindex="0">Housekeeper-Crooked River Lodge</a></h2>
+                    </div>
+                    <p class="chakra-text css-1sawo7p"><span class="css-lvyu5j"><span data-testid="companyName">Hotel
+                                Investment Services</span>&nbsp;—</span><span data-testid="searchSerpJobLocation"
+                            class="css-1t92pv">Alanson, MI</span><span aria-label="5 out of 5 stars"
+                            data-testid="searchSerpJobCompanyRating" role="img" class="css-epvm6"><span
+                                aria-hidden="true" class="css-0">5<!-- --> </span><svg aria-hidden="true"
+                                focusable="false" data-prefix="fas" data-icon="star"
+                                class="svg-inline--fa fa-star css-c4tn3a" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                                </path>
+                            </svg></span></p>
+                    <p class="chakra-text css-jhqp7z" data-testid="searchSerpJobSnippet">Ability to interact with guests
+                        in a pleasant, friendly way. Sufficient education and literacy needed to identify and read
+                        product labels and to communicate…</p>
+                    <div class="css-2imjyh">
+                        <p class="chakra-text css-1g1y608" data-testid="searchSerpJobSalaryConfirmed">$14 - $17 an hour
+                        </p>
+                        <div class="css-17xejub"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="css-15g2oxy">
+        <div class="css-ukpd8g">
+            <nav role="navigation" aria-label="pagination" data-testid="pageNumberContainer" class="css-1hog1e3"><span
+                    class="chakra-link css-1vdegr" aria-current="true" aria-label="current page, page 1"
+                    data-testid="paginationBlock1" href="/search?q=hotel+housekeeper&amp;l=petoskey%2C+mi">1</span>
+            </nav>
+        </div>
+        <div data-testid="jobAlertContainer" class="css-1enu0q">
+            <p class="chakra-text css-vtikty" data-testid="jobAlertTitle">I want to receive the latest job alert for
+                hotel housekeeper in petoskey, mi</p>
+            <div class="css-0">
+                <div class="css-w6uodh"><button type="button" class="chakra-button css-1b9hhh0"
+                        data-testid="jobAlertCreateAlertButton"><svg aria-hidden="true" focusable="false"
+                            data-prefix="fas" data-icon="bell" class="svg-inline--fa fa-bell css-16lvt3y" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M224 0c-17.7 0-32 14.3-32 32l0 19.2C119 66 64 130.6 64 208l0 18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416l384 0c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8l0-18.8c0-77.4-55-142-128-156.8L256 32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3l-64 0-64 0c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z">
+                            </path>
+                        </svg>Sign In or Sign Up to Create Alert</button></div>
+                <p class="chakra-text css-1d6zfuj" data-testid="jobAlertLegalContainer">By signing in to your account,
+                    you agree to SimplyHired's <a class="chakra-link css-1yj6t7g" data-testid="jobAlertTermsLink"
+                        href="/about/terms-of-service">Terms of Service</a> and consent to our <a target="_blank"
+                        rel="noopener" class="chakra-link css-1yj6t7g" data-testid="jobAlertCookiePrivacyLink"
+                        href="https://hrtechprivacy.com/brands/simplyhired#privacypolicy">Cookie and Privacy Policy</a>.
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
-
-{{-- $inpts3 variable from the controller --}}
-<div
- class="tab-pane fade"
- id="profile"
- role="tabpanel"
- aria-labelledby="profile-tab"
->
- <form class="edit-profile-form profile-form" @disabled(true)>
-     <div class="row">
-         {{--  html escape blade rendering --}}
-         @foreach ($inpts3 as $inpt3)
-             <div class="col-md-6">
-                 <div
-                     class="form-inner mb-25">
-                     <label for="{{ $inpt3->id }}">{{ $inpt3->label }}*</label>
-                     <div class="input-area">
-                         <img
-                             src="{{ $inpt3->icon }}"
-                             alt>
-                         <input type="text"
-                             id="{{ $inpt3->id }}"
-                             name="{{ $inpt3->name }}"
-                             value="{{ old($inpt3->name) }}"
-                             placeholder="{{ $inpt3->placeholder }}">
-                     </div>
-                 </div>
-             </div>
-         @endforeach
-
-     </div>
- </form>
-</div>
-
-{{-- $inpts4 variable from the controller --}}
-<div
- class="tab-pane fade"
- id="profile"
- role="tabpanel"
- aria-labelledby="profile-tab"
->
- <form class="edit-profile-form profile-form" @disabled(true)>
-     <div class="row">
-         {{--  html escape blade rendering --}}
-         @foreach ($inpts4 as $inpt4)
-             <div class="col-md-6">
-                 <div
-                     class="form-inner mb-25">
-                     <label for="{{ $inpt4->id }}">{{ $inpt4->label }}*</label>
-                     <div class="input-area">
-                         <img
-                             src="{{ $inpt4->icon }}"
-                             alt>
-                         <input type="text"
-                             id="{{ $inpt4->id }}"
-                             name="{{ $inpt4->name }}"
-                             value="{{ old($inpt4->name) }}"
-                             placeholder="{{ $inpt4->placeholder }}">
-                     </div>
-                 </div>
-             </div>
-         @endforeach
-
-     </div>
- </form>
-</div>
-
-{{-- $inpts5 variable from the controller --}}
-<div
- class="tab-pane fade"
- id="profile"
- role="tabpanel"
- aria-labelledby="profile-tab"
->
- <form class="edit-profile-form profile-form" @disabled(true)>
-     <div class="row">
-         {{--  html escape blade rendering --}}
-         <div class="col-md-6">
-             <div
-                 class="form-inner mb-25">
-                 <label for="country_selector">Select a country here*</label>
-                 <div class="input-area">
-
-                     <input type="text"
-                         style="margin-left: 50px"
-                         id="country_selector"
-                         name="firstname"
-                         >
-                 </div>
-             </div>
-         </div>
-         @foreach ($inpts5 as $inpt5)
-             <div class="col-md-6">
-                 <div
-                     class="form-inner mb-25">
-                     <label for="{{ $inpt5->id }}">{{ $inpt5->label }}*</label>
-                     <div class="input-area">
-                         <img
-                             src="{{ $inpt5->icon }}"
-                             alt>
-                         <input type="text"
-                             id="{{ $inpt5->id }}"
-                             name="{{ $inpt5->name }}"
-                             value="{{ old($inpt5->name) }}"
-                             placeholder="{{ $inpt5->placeholder }}">
-                     </div>
-                 </div>
-             </div>
-         @endforeach
-
-     </div>
- </form>
-</div>
-
-{{-- $inpts6 variable from the controller --}}
-<div
- class="tab-pane fade"
- id="profile"
- role="tabpanel"
- aria-labelledby="profile-tab"
->
- <form class="edit-profile-form profile-form" @disabled(true)>
-     <div class="row">
-         {{--  html escape blade rendering --}}
-         @foreach ($inpts6 as $inpt6)
-             <div class="col-md-6">
-                 <div
-                     class="form-inner mb-25">
-                     <label for="{{ $inpt6->id }}">{{ $inpt6->label }}*</label>
-                     <div class="input-area">
-                         <img
-                             src="{{ $inpt6->icon }}"
-                             alt>
-                         <input type="text"
-                             id="{{ $inpt6->id }}"
-                             name="{{ $inpt6->name }}"
-                             value="{{ old($inpt6->name) }}"
-                             placeholder="{{ $inpt6->placeholder }}">
-                     </div>
-                 </div>
-             </div>
-         @endforeach
-
-     </div>
- </form>
-</div>
-
-{{-- $inpts7 variable from the controller --}}
-<div
- class="tab-pane fade"
- id="profile"
- role="tabpanel"
- aria-labelledby="profile-tab"
->
- <form class="edit-profile-form profile-form" @disabled(true)>
-     <div class="row">
-         {{--  html escape blade rendering --}}
-         @foreach ($inpts7 as $inpt7)
-             <div class="col-md-6">
-                 <div
-                     class="form-inner mb-25">
-                     <label for="{{ $inpt7->id }}">{{ $inpt7->label }}*</label>
-                     <div class="input-area">
-                         <img
-                             src="{{ $inpt7->icon }}"
-                             alt>
-                         <input type="text"
-                             id="{{ $inpt7->id }}"
-                             name="{{ $inpt7->name }}"
-                             value="{{ old($inpt7->name) }}"
-                             placeholder="{{ $inpt7->placeholder }}">
-                     </div>
-                 </div>
-             </div>
-         @endforeach
-
-     </div>
- </form>
-</div>
-I'm building a website for a company called Travel Plan.
-These are the main features of the company.
-1, they provide a service like job board.
-    (a) where by foreigners outside of netherlands can search for a job from the list of jobs provided buy a company.
-    (b) Then the User can apply for the job through a form input fields., where they will provide their details and cv. which will be uploaded to Travel Plan website.
-    (c) The details of the user will be sent to the company the user applied for the job and then they will review the application. and either approve or reject the application. and send the feedback to Travel Plan and then Travel Plan will send the feedback to the user who applied for the job.
-    (d) if the company accepted the application the feedback from the company , will contain a request telling the applicant to visit netherland for interview and to resume the job.
-
-2, Travel Plan also provide a Visa application, Residence permit application, Flights ticket application. Hotel booking application or apartment rental services or even car rental service and any other services that the Applicant might need on arrival before he could settle in.
-
-
-3, Other details of the company i thought you might need is the location of Travel Plan which is : 2001,Strawinskylaan Amsterdam, North Holland.
-
-i need you to generate all the pages suitable for this project with the given information.
-
-
-
-
-{{-- check if the type is not text --}}
-
-I'm building a website for a company called Travel Plan.
-These are the main features of the company.
-1, they provide a service like job board.
-
-2, Travel Plan also provide a Visa application, Residence permit application, Flights ticket application. Hotel booking application or apartment rental services or even car rental service and any other services that the Applicant might need on arrival before he could settle in.
-
-i need the the contents for the head meata tags and head title of all the authentication pages of this project
-like this tags i also need the markup for the head meata tags
-
-these are the pages i have generated for this project are
-
-
-
-1, Home page
-2, About us
-3, Contact us
-4, Login
-5, Register
-6, blog
-7, job listing
-8, services
-9, terms
-10, privacy policy
-
-Dashboard Pages:
-
-1, Dashboard
-2, Applied Jobs
-3, Job Applications
-4, Shortlisted Jobs
-5, CV Manager
-6, Packages
-7, Messages
-8, Change Password
-9, Profile
-10, Flights booking
-11, Available flights
-
-    (a) where by foreigners outside of any country can search for a job from the list of jobs provided by a company.
-    (b) Then the User can apply for the job through a form input fields., where they will provide their details and cv. which will be uploaded to Travel Plan website.
-    (c) The details of the user will be sent to the company the user applied for the job and then they will review the application. and either approve or reject the application. and send the feedback to Travel Plan and then Travel Plan will send the feedback to the user who applied for the job.
-    (d) if the company accepted the application the feedback from the company , will contain a request telling the applicant to visit the company's location for interview and to resume the job.
-
-2, Travel Plan also provide a Visa application, Residence permit application, Flights ticket application. Hotel booking application or apartment rental services or even car rental service and any other services that the Applicant might need on arrival before he could settle in.
-
-i need the the contents for the head tags of all the pages of this project
-these are the pages i have generated for this project are
-
-Main Pages:
-
- 1, Home page
- 2, About us
- 3, Contact us
- 4, Login
- 5, Register
- 6, blog
- 7, job listing
- 8, services
- 9, terms
- 10, privacy policy
-
- Dashboard Pages:
-
- 1, Dashboard
- 2, Applied Jobs
- 3, Job Applications
- 4, Shortlisted Jobs
- 5, CV Manager
- 6, Packages
- 7, Messages
- 8, Change Password
- 9, Profile
-10, Flights booking
-11, Available flights
-
-1,
-
-3, Other details of the company i thought you might need is the location of Travel Plan which is : 2001,Strawinskylaan Amsterdam, North Holland.
-
-i need you to generate all the contents suitable for the About Us page of this project with the given information.
-
-note the company shouldn't  be just about Netherlands but all over the world
-
-<!-- Pagination -->
-<nav class="ls-pagination">
-    <ul>
-      <li class="prev"><a href="#"><i class="fa fa-arrow-left"></i></a></li>
-      <li><a href="#">1</a></li>
-      <li><a href="#" class="current-page">2</a></li>
-      <li><a href="#">3</a></li>
-      <li class="next"><a href="#"><i class="fa fa-arrow-right"></i></a></li>
-    </ul>
-  </nav>
-
-1.
- I deleted my old hosting subscription in this account that has the main domain of dexfintech.org and i created a new account with the domain name of gemcrest.org, but these domains  crownagent.org, dexfintech.org, gemcrest.org,  fbicryptoiq.us,  travel-plan.agency and travel-plan.agency were added to the deleted hosting account. and now that i wanted to host them in the new hosting account gemcrest.org. There seems to be a conflict with the ssl certificates for these domains. so i would like to install ssl certificates for all of them with the new hosting accoun, help me and do this.
-
-2.
-  I would like to be able to install a particullar php version for a particular domain. so i can run different projects for all my domains., and be able to install the for example composer on each domain or should i say on each folder, so the composer on the root domain or directory wont be affecting the other domains.
-
-  I have tried settiing it up from the ui in my cpanel with the php tweak tool but it seems not to be working. please help me and do this.
-
-
-
-things to do
-
-1, create countries.
-   a, name
-
-2, create locations that correspond to the countries.
-   a, country_id
-   b, city
-
-3, create Industries.
-
-4, create companies that correspond to the industries.
-
-
-countries we need to add
-1, greece
-2, netherlands
-3, spain
-4, usa
-5, uk
-6, canada
-7, mexico
-8, brazil
-9, peru
-10, argentina

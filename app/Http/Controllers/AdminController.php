@@ -9,6 +9,7 @@ use Spatie\Permission\Models\Permission;
 use App\Models\FormInput;
 use App\Models\JobApplication;
 use App\Models\Job;
+use App\Models\Location;
 
 
 class AdminController extends Controller
@@ -207,6 +208,16 @@ class AdminController extends Controller
         $job = Job::find($job->id);
         $job->update($request->all());
         return redirect()->route('admin.jobs')->with('success', 'Job updated successfully');
+    }
+
+    //locations
+
+    public function locations()
+    {
+        $locations = Location::with(['jobs', 'country'])->get();
+        return view('admin.locations', [
+            'locations' => $locations
+        ]);
     }
 
 

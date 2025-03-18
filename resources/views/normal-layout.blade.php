@@ -403,6 +403,12 @@
         </script>
         <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
 
+        <script>
+            document.getElementById('country_id').addEventListener('change', function() {
+                document.getElementById('location-filter-form').submit();
+            });
+        </script>
+
 
     </body>
 

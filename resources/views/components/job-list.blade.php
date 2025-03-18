@@ -1,4 +1,4 @@
-@props(['jobs'])
+@props(['jobs', 'countries'])
 
 <!-- Listing Section -->
 <section class="ls-section">
@@ -15,7 +15,17 @@
                     <div class="ls-switcher">
 
                         <div class="sort-by">
-                            <select class="chosen-select">
+
+                            <form id="location-filter-form" action="{{ route('job-listing') }}" method="GET">
+                                <label for="country_id">Filter by Country:</label>
+                                <select name="country_id" id="country_id">
+                                    <option value="">All Countries</option>  @foreach ($countries as $country)  <option value="{{ $country->id }}">{{ $country->name }}</option>
+                                    @endforeach
+                                </select>
+                            </form>
+
+
+                            {{-- <select class="chosen-select">
                                 <option>New Jobs</option>
                                 <option>Freelance</option>
                                 <option>Full Time</option>
@@ -31,7 +41,7 @@
                                 <option>Show 40</option>
                                 <option>Show 50</option>
                                 <option>Show 60</option>
-                            </select>
+                            </select> --}}
                         </div>
                     </div>
 
