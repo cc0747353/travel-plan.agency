@@ -30,7 +30,7 @@
                                                                 class="v1v1m_5708741520830668687logo v1v1CToWUd"
                                                                 style="border: 0px; line-height: 100%; outline: none; display: block; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 16px; width: 572px; text-decoration: none;"
                                                                 src="https://travel-plan.agency/email-logo.png"
-                                                                alt="Namecheap" width="172" height="89"
+                                                                alt="Namecheap" width="172"
                                                                 border="0" />
 
                                                         </a>
