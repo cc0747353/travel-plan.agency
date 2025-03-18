@@ -182,7 +182,7 @@ class AdminController extends Controller
 
     public function jobs()
     {
-        $jobs = Job::with('countries')->get();
+        $jobs = Job::with('country')->get();
         return view('admin.jobs', [
             'jobs' => $jobs
         ]);
