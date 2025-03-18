@@ -9,7 +9,7 @@ use Spatie\Permission\Models\Permission;
 use App\Models\FormInput;
 use App\Models\JobApplication;
 use App\Models\Job;
-use App\Models\Location;
+use App\Models\Country;
 
 
 class AdminController extends Controller
@@ -182,7 +182,7 @@ class AdminController extends Controller
 
     public function jobs()
     {
-        $jobs = Job::with('location')->get();
+        $jobs = Job::with('countries')->get();
         return view('admin.jobs', [
             'jobs' => $jobs
         ]);
@@ -212,11 +212,11 @@ class AdminController extends Controller
 
     //locations
 
-    public function locations()
+    public function countries()
     {
-        $locations = Location::with(['jobs', 'country'])->get();
-        return view('admin.locations', [
-            'locations' => $locations
+        $countries = Country::with(['jobs', 'country'])->get();
+        return view('admin.countries', [
+            'countries' => $countries
         ]);
     }
 

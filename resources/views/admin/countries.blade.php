@@ -12,7 +12,7 @@
 @section('content')
     <div class="row">
         <!-- Job Block -->
-        @forelse ($locations as $location)
+        @forelse ($countries as $country)
 
         <!-- Job Block -->
         <div class="job-block">
@@ -20,9 +20,9 @@
                 <div class="content">
                     {{-- <span class="company-logo"><img src="{{ $job->companyLogo }}" alt></span> --}}
 
-                    <h4><a href="#">{{ $location->name }}</a></h4>
+                    <h4><a href="#">{{ $country->name }}</a></h4>
 
-                    <p style="font-weight: 700; margin-bottom: 5px">{{ $location->country->name }}</p>
+                    {{-- <p style="font-weight: 700; margin-bottom: 5px">{{ $location->country->name }}</p> --}}
 
 
 
