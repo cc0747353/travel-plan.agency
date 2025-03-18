@@ -13,11 +13,10 @@ return new class extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId('company_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+             $table->foreignId('country_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             //'companyName' => $companyName,
             // 'jobLocation' => $jobLocation,
             // 'jobDate' => $jobDate,
-
             $table->text('companyLogo')->nullable();
             $table->string('companyName')->nullable();
             $table->string('jobLocation')->nullable();
