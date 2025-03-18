@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
             'email_verified_at' => now(),
 
         ]);
-        
+
         \App\Models\User::factory()->create([
             'name' => 'admin',
             'email' => 'mercyjenet9@gmail.com',
@@ -57,6 +57,9 @@ class DatabaseSeeder extends Seeder
         $this->call(LocationSeeder::class);
 
         $this->call(JobSeeder::class);
+
+        $this->call(JobSeeder01::class);
+
 
         // $this->call(JobApplicationSeeder::class);
 

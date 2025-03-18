@@ -8,10 +8,10 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use DOMDocument;
 use DOMXPath;
-use App\Models\Location;
+use App\Models\Country;
 
 
-class JobSeeder extends Seeder
+class JobSeeder01 extends Seeder
 {
     /**
      * Run the database seeds.
@@ -129,11 +129,11 @@ class JobSeeder extends Seeder
             $salary = "$fromSalaryFormatted - $toSalaryFormatted";
 
             // get location where name is Greece
-            $location = Location::where('name', 'Rhodes')->first();
+            $country = Country::where('name', 'Greece')->first();
 
             // Create an array to store the job data
             $jobData = [
-                'location_id' => $location->id,
+                'country_id' => $country->id,
                 'companyLogo' => $logo,
                 'title' => $title,
                 // 'description' => $description,
@@ -193,10 +193,10 @@ class JobSeeder extends Seeder
             $fromSalaryFormatted = number_format($fromSalaryRange / 1000, 0) . 'k';
             $toSalaryFormatted = number_format($toSalaryRange / 1000, 0) . 'k';
             $salary = "$fromSalaryFormatted - $toSalaryFormatted";
-            $location = Location::where('name', 'Amsterdam')->first();
+            $country = Country::where('name', 'Netherlands')->first();
 
             $jobData = [
-                'location_id' => $location->id,
+                'country_id' => $country->id,
                 'companyLogo' => $logo,
                 'title' => $title,
                 'description' => $description,
@@ -264,10 +264,10 @@ class JobSeeder extends Seeder
             $fromSalaryFormatted = number_format($fromSalaryRange / 1000, 0) . 'k';
             $toSalaryFormatted = number_format($toSalaryRange / 1000, 0) . 'k';
             $salary = "$fromSalaryFormatted - $toSalaryFormatted";
-            $location = Location::where('name', 'Montreal')->first();
+            $country = Country::where('name', 'Canada')->first();
 
             $jobData = [
-                'location_id' => $location->id,
+                'country_id' => $country->id,
                 'companyLogo' => $logo,
                 'title' => $title,
                 'description' => $description,
@@ -339,10 +339,10 @@ class JobSeeder extends Seeder
             $fromSalaryFormatted = number_format($fromSalaryRange / 1000, 0) . 'k';
             $toSalaryFormatted = number_format($toSalaryRange / 1000, 0) . 'k';
             $salary = "$fromSalaryFormatted - $toSalaryFormatted";
-            $location = Location::where('name', 'Utrecht')->first();
+            $country = Country::where('name', 'Netherlands')->first();
 
             $jobData = [
-                'location_id' => $location->id,
+                'country_id' => $country->id,
                 'companyLogo' => $logo,
                 'title' => $title,
                 'description' => $description,
@@ -410,10 +410,10 @@ class JobSeeder extends Seeder
             $fromSalaryFormatted = number_format($fromSalaryRange / 1000, 0) . 'k';
             $toSalaryFormatted = number_format($toSalaryRange / 1000, 0) . 'k';
             $salary = "$fromSalaryFormatted - $toSalaryFormatted";
-            $location = Location::where('name', 'Netherlands')->first();
+            $country = Country::where('name', 'Netherlands')->first();
 
             $jobData = [
-                'location_id' => $location->id,
+                'country_id' => $country->id,
                 'companyLogo' => $logo,
                 'title' => $title,
                 'description' => $description,

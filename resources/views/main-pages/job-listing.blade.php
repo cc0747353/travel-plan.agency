@@ -9,7 +9,7 @@
 
     @section('content')
 
-        <x-job-list :jobs="$jobs" :countries="$countries">
+        <x-job-list :jobs="$jobs" :countries="$countries" :selectedCountryId="$selectedCountryId">
 
             @foreach ($jobs as $job)
                 <!-- Job Block -->

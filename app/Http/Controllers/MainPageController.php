@@ -67,16 +67,15 @@ class MainPageController extends Controller
     }
 
 
-
     public function jobListing(Request $request)
     {
-        // Get the location filter from the request
+        // Get the country filter from the request
         $countryId = $request->input('country_id');
 
         // Start building the query
         $query = Job::orderBy('created_at', 'asc');
 
-        // Apply the location filter if it's provided
+        // Apply the country filter if it's provided
         if ($countryId) {
             $query->where('country_id', $countryId);
         }
@@ -84,11 +83,15 @@ class MainPageController extends Controller
         // Paginate the results
         $jobs = $query->paginate(20);
 
-        // Fetch all locations for the filter dropdown
-        $countries = Country::all();
+        // Fetch all countries for the filter dropdown
+        $countries = \App\Models\Country::all(); // Make sure you have `use App\Models\Country;` at the top
 
-        // Pass the jobs and locations to the view
-        return view('main-pages.job-listing', ['jobs' => $jobs, 'countries' => $countries]);
+        // Pass the jobs, countries, and the selected country ID to the view
+        return view('main-pages.job-listing', [
+            'jobs' => $jobs,
+            'countries' => $countries,
+            'selectedCountryId' => $countryId, // Pass the selected country ID
+        ]);
     }
 
 
