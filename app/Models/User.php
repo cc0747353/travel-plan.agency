@@ -20,7 +20,7 @@ use Stephenjude\Wallet\Traits\HasWallet;
 
 
 
-class User extends Authenticatable implements Wallet, MustVerifyEmail
+class User extends Authenticatable implements Wallet
 {
     use HasRoles, HasPermissions;
     use HasApiTokens;
