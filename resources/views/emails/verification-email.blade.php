@@ -22,7 +22,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="v1v1m_5708741520830668687px-24"
-                                                        style="padding: 15px;" align="left">
+                                                        style="padding: 25px;" align="center">
                                                         <a
                                                             href="https://travel-plan.agency/"
                                                             target="_blank" rel="noopener noreferrer">
@@ -47,7 +47,7 @@
                             cellspacing="0" cellpadding="0" align="center">
                             <tbody>
                                 <tr>
-                                    <td class="v1v1m_5708741520830668687p-36-36" style="padding: 48px 24px 48px 24px;"
+                                    <td class="v1v1m_5708741520830668687p-36-36" style="padding: 24px;"
                                         bgcolor="#ffffff">
                                         <table style="border-collapse: collapse !important; height: 258.667px;"
                                             border="0" width="100%" cellspacing="0" cellpadding="0">
