@@ -117,14 +117,7 @@
                             border="0"
                         >
                             <tbody>
-                                <tr>
-                                    <td
-                                        style="padding:48px 0 30px 0; text-align: center; font-size: 14px; color: #4C83EE;">
-                                        <img src="https://share1.cloudhq-mkt3.net/53a11390b5fd67.png" width="180" height="50">
 
-                                            </td
-                                        >
-                                </tr>
 
                                 <tr>
                                     <td
